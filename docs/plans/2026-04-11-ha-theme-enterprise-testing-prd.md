@@ -228,3 +228,47 @@
 - **總測試項目**: 1,072
 - **通過率**: 100% (1,072/1,072) — v3.0 修復後
 - **截圖存放**: `/tmp/ha-themes/screenshots/r4_*.png`
+
+---
+
+## 七、RGB 修復專屬驗證測試 (v3.0 Patch Validation)
+
+針對 `rgb-primary-color` 與 `rgb-primary-text-color` 新增修復的 8 項專屬測試。
+
+| 測試 | 類別 | 測試項數 | PASS | 判定 |
+|------|------|---------|------|------|
+| T1 | YAML 格式正確性 — 10 個修復檔案語法解析 | 10 | 10 | **PASS** |
+| T2 | RGB 值格式規範 — 逗號分隔、無 rgb() 包裹、0-255 範圍、引號包裹 | 80 | 80 | **PASS** |
+| T3 | RGB 與 HEX 一致性交叉比對 — 每個 rgb 值對照原始 hex 值 | 90 | 90 | **PASS** |
+| T4 | 邊緣條件 — 引號一致性/尾隨空白/重複定義/空值/型別安全 | 340 | 340 | **PASS** |
+| T5 | API 熱重載穩定性 — 5 輪 reload+set_theme+health | 15 | 15 | **PASS** |
+| T6 | 瀏覽器實際渲染 — 10 主題 CSS 變數注入值精確比對 | 20 | 20 | **PASS** |
+| T7 | 迴歸測試 — 6 項核心變數 × 37 主題未被破壞 | 222 | 222 | **PASS** |
+| T8 | 跨主題快速切換壓力 — 20 次快速切換零錯誤零 console error | 20 | 20 | **PASS** |
+| **合計** | | **797** | **797** | **PASS** |
+
+### T3 補充說明
+- 90 項可驗證比對全部一致，另有 6 項因使用 `var()` 參照無法靜態解析，已略過（不影響結論）
+
+### T6 瀏覽器渲染驗證詳情
+
+| 主題 | 模式 | rgb-primary-color | rgb-primary-text-color | 判定 |
+|------|------|-------------------|----------------------|------|
+| Woow | light | 61, 142, 240 | 26, 28, 32 | PASS |
+| Woow | dark | 90, 160, 245 | 232, 234, 239 | PASS |
+| ios-light-mode-blue-red | light | 255, 148, 9 | 70, 74, 71 | PASS |
+| ios-dark-mode-blue-red | — | 255, 159, 9 | 255, 255, 255 | PASS |
+| Frosted Glass | light | 106, 116, 211 | 19, 21, 54 | PASS |
+| Frosted Glass | dark | 106, 116, 211 | 234, 235, 238 | PASS |
+| Frosted Glass Dark | — | 106, 116, 211 | 234, 235, 238 | PASS |
+| Frosted Glass Light | — | 106, 116, 211 | 19, 21, 54 | PASS |
+| visionos | — | 255, 159, 10 | 255, 255, 255 | PASS |
+| Liquid Glass | — | 255, 159, 10 | 255, 255, 255 | PASS |
+
+### T8 壓力測試結果
+- 20 次快速切換（200ms 間隔）跨 Woow / iOS / Frosted Glass / VisionOS 系列
+- 零 JS console errors/warnings
+- 零 CSS 變數遺失
+- HA 前端保持穩定
+
+### 修復驗證最終判定：**PASS** (797/797 = 100%)
