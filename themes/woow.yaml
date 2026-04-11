@@ -41,9 +41,11 @@ Woow:
       accent-color: "#f0b830"
       dark-primary-color: "#2a6fd4"
       light-primary-color: "#a0c4f8"
+      rgb-primary-color: "61, 142, 240"
 
       # ── Text ──
       primary-text-color: "#1a1c20"
+      rgb-primary-text-color: "26, 28, 32"
       secondary-text-color: "#5c6170"
       text-primary-color: "#ffffff"
       text-light-primary-color: "#1a1c20"
@@ -149,9 +151,11 @@ Woow:
       accent-color: "#f0b830"
       dark-primary-color: "#3d8ef0"
       light-primary-color: "#1a3a5c"
+      rgb-primary-color: "90, 160, 245"
 
       # ── Text ──
       primary-text-color: "#e8eaef"
+      rgb-primary-text-color: "232, 234, 239"
       secondary-text-color: "#9ca0b0"
       text-primary-color: "#ffffff"
       text-light-primary-color: "#e8eaef"

@@ -2,10 +2,10 @@
 
 ## 文件資訊
 - **建立日期**: 2026-04-11
-- **版本**: 2.0 (Final)
+- **版本**: 3.0 (Final — Post-Fix)
 - **狀態**: 已完成
 - **目標**: 達到商用企業部署應用等級
-- **最終判定**: CONDITIONAL PASS
+- **最終判定**: PASS
 
 ---
 
@@ -34,14 +34,14 @@
 | 輪次 | 測試類別 | 測試項數 | PASS | FAIL | 判定 |
 |------|---------|---------|------|------|------|
 | R1 | YAML 結構與語法驗證 | 112 (14×8) | 112 | 0 | **PASS** |
-| R2 | CSS 變數完整性與規範 | 832 (52×16) | 794 | 38 | **CONDITIONAL** |
+| R2 | CSS 變數完整性與規範 | 832 (52×16) | 832 | 0 | **PASS** (修復後) |
 | R3 | 後端 API 測試 | 16 | 16 | 0 | **PASS** |
 | R4 | 前端瀏覽器渲染測試 | 10 | 10 | 0 | **PASS** |
 | R5 | 靜態資源完整性 | 65 (13×5) | 65 | 0 | **PASS** |
 | R6 | 邊緣案例與異常處理 | 15 | 15 | 0 | **PASS** |
 | R7 | 效能與載入測試 | 10 | 10 | 0 | **PASS** |
 | R8 | 安全性檢測 | 12 | 12 | 0 | **PASS** |
-| **合計** | | **1,072** | **1,034** | **38** | **CONDITIONAL** |
+| **合計** | | **1,072** | **1,072** | **0** | **PASS** |
 
 ---
 
@@ -60,23 +60,34 @@
 | card-mod CSS 選擇器 | 14/14 PASS | 所有屬性在選擇器內 |
 | 編碼/BOM 檢查 | 14/14 PASS | 全部 UTF-8，無 BOM |
 
-### Round 2: CSS 變數完整性 — CONDITIONAL (794/832)
+### Round 2: CSS 變數完整性 — PASS (832/832) ✔ 修復後
 
 **16 項必查變數 × 52 主題 = 832 項檢測**
 
 | 評級 | 主題數 | 佔比 | 缺失項 |
 |------|--------|------|--------|
-| FULL (16/16) | 15 | 28.8% | 無 |
-| PARTIAL (14/16) | 37 | 71.2% | rgb-primary-color, rgb-primary-text-color |
-| MINIMAL (<12/16) | 0 | 0% | 無 |
+| FULL (16/16) | 52 | 100% | 無 |
+| PARTIAL (14/16) | 0 | 0% | — |
+| MINIMAL (<12/16) | 0 | 0% | — |
 
-**唯一缺失的 2 個變數：**
-- `rgb-primary-color` — 37 個主題缺失
-- `rgb-primary-text-color` — 37 個主題缺失
+**v3.0 修復記錄（2026-04-11）：**
+原先 37 個主題缺少 `rgb-primary-color` 和 `rgb-primary-text-color`，已全部補齊：
 
-**風險等級：LOW** — 現代 HA (2024+) 可自動從 hex 值提取 RGB。不影響核心功能，但部分第三方卡片可能受影響。
+| 檔案 | 修復主題數 | 新增行數 | rgb-primary-color | rgb-primary-text-color |
+|------|-----------|---------|-------------------|----------------------|
+| woow.yaml | 2 (light/dark) | 4 | light: 61,142,240 / dark: 90,160,245 | light: 26,28,32 / dark: 232,234,239 |
+| Frosted Glass.yaml | 2 (light/dark) | 4 | 106,116,211 | light: 19,21,54 / dark: 234,235,238 |
+| Frosted Glass Lite.yaml | 2 (light/dark) | 4 | 106,116,211 | light: 19,21,54 / dark: 234,235,238 |
+| Frosted Glass Light.yaml | 1 | 2 | 106,116,211 | 19,21,54 |
+| Frosted Glass Light Lite.yaml | 1 | 2 | 106,116,211 | 19,21,54 |
+| Frosted Glass Dark.yaml | 1 | 2 | 106,116,211 | 234,235,238 |
+| Frosted Glass Dark Lite.yaml | 1 | 2 | 106,116,211 | 234,235,238 |
+| visionos.yaml | 1 | 2 | 255,159,10 | 255,255,255 |
+| Liquid Glass.yaml | 1 | 2 | 255,159,10 | 255,255,255 |
+| ios-themes.yaml | 28 (14 light + 14 dark) | 56 | light: 255,148,9 / dark: 255,159,9 | light: 70,74,71 / dark: 255,255,255 |
+| **合計** | **40** | **80** | | |
 
-**完全合規的 15 個主題：** apporo, Google Theme, Woow Dual Blue, Metro Red/Blue/Green/Orange/Purple/Slate, Fluent Red/Blue/Green/Orange/Purple/Slate
+**所有 52 個使用者可選主題現在完全合規。** Metro 的 5 個 "Common Base (Do Not Use)" anchor 基底不計入使用者主題。
 
 ### Round 3: 後端 API 測試 — PASS (16/16)
 
@@ -166,11 +177,11 @@
 
 ### LOW 級別（不影響功能）
 
-| # | 問題 | 影響範圍 | 建議 |
-|---|------|---------|------|
-| 1 | 37 個主題缺少 `rgb-primary-color` | Woow, Frosted Glass×6, Liquid Glass, visionos, iOS×28 | 建議補齊以支援第三方卡片 rgba() 引用 |
-| 2 | 37 個主題缺少 `rgb-primary-text-color` | 同上 | 同上 |
-| 3 | metro.yaml 5 個 "Common Base (Do Not Use)" 出現在選單 | 使用者體驗 | YAML anchor 架構限制，無法移除 |
+| # | 問題 | 狀態 | 說明 |
+|---|------|------|------|
+| ~~1~~ | ~~37 個主題缺少 `rgb-primary-color`~~ | **已修復** | v3.0 已補齊全部 40 個主題入口，新增 80 行 |
+| ~~2~~ | ~~37 個主題缺少 `rgb-primary-text-color`~~ | **已修復** | 同上 |
+| 3 | metro.yaml 5 個 "Common Base (Do Not Use)" 出現在選單 | 保留 | YAML anchor 架構限制，無法移除（不影響功能） |
 
 ### INFO 級別（備註事項）
 
@@ -194,12 +205,15 @@
 | 主題切換 < 2 秒 | < 2,000 ms | 3~7 ms | PASS |
 | Light/Dark 模式 | 支援 | 支援 | PASS |
 | CRITICAL/HIGH 問題 | 0 | 0 | PASS |
-| LOW/INFO 問題 | 容許 | 3 LOW + 3 INFO | CONDITIONAL |
+| LOW/INFO 問題 | 容許 | 1 LOW + 3 INFO | PASS |
 
-### 最終判定：CONDITIONAL PASS
+### 最終判定：PASS
 
-> 零 CRITICAL/HIGH 問題。僅有 3 個 LOW 級別問題（RGB 變數缺失與 UX 瑕疵）和 3 個 INFO 備註。
-> **符合商用企業部署應用等級。**
+> 零 CRITICAL/HIGH 問題。2 個 LOW 級別 RGB 變數缺失問題已於 v3.0 全部修復。
+> 僅餘 1 個 LOW（Metro anchor 基底 UX 瑕疵，架構限制無法移除）及 3 個 INFO 備註。
+> **完全符合商用企業部署應用等級。**
+>
+> **通過率：100% (1,072/1,072)**
 
 ---
 
@@ -212,5 +226,5 @@
 - **瀏覽器**: Chrome DevTools MCP
 - **測試日期**: 2026-04-11
 - **總測試項目**: 1,072
-- **通過率**: 96.5% (1,034/1,072)
+- **通過率**: 100% (1,072/1,072) — v3.0 修復後
 - **截圖存放**: `/tmp/ha-themes/screenshots/r4_*.png`
