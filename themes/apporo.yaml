@@ -1,0 +1,196 @@
+apporo:
+  # =========================
+  # 1) 核心色
+  # =========================
+  primary-color: "#E4C465"
+  accent-color: "#E4C465"
+  text-primary-color: "#212121"
+
+  # =========================
+  # 1b) 狀態色 (Status colors)
+  # =========================
+  error-color: "#DB4437"
+  warning-color: "#FFA726"
+  success-color: "#43A047"
+  info-color: "#039BE5"
+
+  # =========================
+  # 1c) RGB 變數 (RGB variables)
+  # =========================
+  rgb-primary-color: "228, 196, 101"
+  rgb-accent-color: "228, 196, 101"
+  rgb-error-color: "219, 68, 55"
+  rgb-warning-color: "255, 167, 38"
+  rgb-success-color: "67, 160, 71"
+  rgb-info-color: "3, 155, 229"
+
+  # =========================
+  # 2) Header / Link
+  # =========================
+  app-header-background-color: "#54585A"
+  link-color: "#95D3ED"
+
+  # =========================
+  # 3) Icon（全域預設）
+  # =========================
+  paper-item-icon-color: "#C7C7C7"
+  state-icon-color: "#C7C7C7"
+  paper-item-icon-active-color: "#E4C465"
+  state-icon-active-color: "#E4C465"
+  state-icon-unavailable-color: "#C7C7C7"
+
+  switch-checked-color: "#E4C465"
+  slider-color: "#E4C465"
+
+  # =========================
+  # 4) 圓角
+  # =========================
+  card-border-radius: "26px"
+  ha-card-border-radius: "26px"
+  paper-card-border-radius: "26px"
+  dialog-border-radius: "32px"
+
+  # =========================
+  # 5) Light / Dark
+  # =========================
+  modes:
+
+    # =========================
+    # 🌕 LIGHT MODE
+    # =========================
+    light:
+      # 背景
+      primary-background-color: "#FFFFFF"
+      secondary-background-color: "#EDEDED"
+
+      card-background-color: "#E0E0E0"
+      paper-card-background-color: "#E0E0E0"
+      ha-card-background: "#E0E0E0"
+
+      # 文字
+      primary-text-color: "#54585A"
+      secondary-text-color: "rgba(84,88,90,0.8)"
+      divider-color: "rgba(84,88,90,0.18)"
+
+      # ==================================================
+      # 🔥【關鍵】中間卡片 icon → 深色（與 Sidebar 一致）
+      # ==================================================
+      paper-item-icon-color: "#54585A"
+      state-icon-color: "#54585A"
+
+      # Sidebar
+      sidebar-background-color: "#D6D6D6"
+      sidebar-text-color: "#54585A"
+      sidebar-icon-color: "#54585A"
+
+      sidebar-selected-background-color: "rgba(196,158,83,0.30)"
+      sidebar-selected-text-color: "#54585A"
+      sidebar-selected-icon-color: "#E4C465"
+
+      # ==================================================
+      # 子畫面 / More-info Dialog（實心）
+      # ==================================================
+      dialog-backdrop-filter: "none"
+      dialog-backdrop-color: "rgba(0,0,0,0.55)"
+
+      dialog-background-color: "#D0D0D0"
+      ha-dialog-card-background-color: "#FFFFFF"
+
+      dialog-primary-text-color: "#54585A"
+      dialog-secondary-text-color: "rgba(84,88,90,0.9)"
+
+      dialog-icon-color: "#54585A"
+      dialog-icon-active-color: "#E4C465"
+
+      dialog-divider-color: "rgba(84,88,90,0.20)"
+
+      # 狀態色 (Status colors)
+      error-color: "#DB4437"
+      warning-color: "#FFA726"
+      success-color: "#43A047"
+      info-color: "#039BE5"
+
+      # RGB 變數 (RGB variables)
+      rgb-primary-color: "228, 196, 101"
+      rgb-accent-color: "228, 196, 101"
+      rgb-primary-text-color: "84, 88, 90"
+      rgb-secondary-text-color: "84, 88, 90"
+      rgb-card-background-color: "224, 224, 224"
+      rgb-error-color: "219, 68, 55"
+      rgb-warning-color: "255, 167, 38"
+      rgb-success-color: "67, 160, 71"
+      rgb-info-color: "3, 155, 229"
+
+      # 捲軸 (Scrollbar)
+      scrollbar-thumb-color: "rgba(84,88,90,0.35)"
+
+      # 程式碼編輯器 (Code editor)
+      code-editor-background-color: "#F5F5F5"
+      markdown-code-background-color: "#F5F5F5"
+
+    # =========================
+    # 🌑 DARK MODE
+    # =========================
+    dark:
+      primary-background-color: "#54585A"
+      secondary-background-color: "#3F4244"
+
+      card-background-color: "#4A4E50"
+      paper-card-background-color: "#4A4E50"
+      ha-card-background: "#4A4E50"
+
+      primary-text-color: "#FFFFFF"
+      secondary-text-color: "#E0E0E0"
+      divider-color: "rgba(255,255,255,0.12)"
+
+      paper-item-icon-color: "#C7C7C7"
+      state-icon-color: "#C7C7C7"
+
+      sidebar-background-color: "#3F4244"
+      sidebar-text-color: "#C7C7C7"
+      sidebar-icon-color: "#C7C7C7"
+
+      sidebar-selected-background-color: "rgba(196,158,83,0.35)"
+      sidebar-selected-text-color: "#E4C465"
+      sidebar-selected-icon-color: "#E4C465"
+
+      # ==================================================
+      # 子畫面 / More-info Dialog（深色模式）
+      # ==================================================
+      dialog-backdrop-filter: "none"
+      dialog-backdrop-color: "rgba(0,0,0,0.65)"
+
+      dialog-background-color: "#3F4244"
+      ha-dialog-card-background-color: "#4A4E50"
+
+      dialog-primary-text-color: "#FFFFFF"
+      dialog-secondary-text-color: "#E0E0E0"
+
+      dialog-icon-color: "#C7C7C7"
+      dialog-icon-active-color: "#E4C465"
+
+      dialog-divider-color: "rgba(255,255,255,0.12)"
+
+      # 狀態色 (Status colors)
+      error-color: "#DB4437"
+      warning-color: "#FFA726"
+      success-color: "#43A047"
+      info-color: "#039BE5"
+
+      # RGB 變數 (RGB variables)
+      rgb-primary-color: "228, 196, 101"
+      rgb-accent-color: "228, 196, 101"
+      rgb-primary-text-color: "255, 255, 255"
+      rgb-secondary-text-color: "224, 224, 224"
+      rgb-card-background-color: "74, 78, 80"
+      rgb-error-color: "219, 68, 55"
+      rgb-warning-color: "255, 167, 38"
+      rgb-success-color: "67, 160, 71"
+      rgb-info-color: "3, 155, 229"
+
+      # 捲軸 (Scrollbar)
+      scrollbar-thumb-color: "rgba(255,255,255,0.25)"
+
+      # 程式碼編輯器 (Code editor)
+      code-editor-background-color: "#3F4244"
+      markdown-code-background-color: "#3F4244"

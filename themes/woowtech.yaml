@@ -1,0 +1,258 @@
+Woow Dual Blue:
+  # =========================
+  # 1) 全域共用的核心色（品牌主色）
+  # =========================
+  primary-color: "#6284FD"          # 主色：多數元件、強調元素會參考它
+  accent-color: "#6284FD"           # 強調色：按鈕、互動重點、highlight
+
+  # 主色衍生色 (Core Color Derivatives)
+  dark-primary-color: "#4A6AD9"     # 深主色
+  darker-primary-color: "#3A54B5"   # 更深主色
+  light-primary-color: "#A4B8FE"    # 淺主色
+  text-primary-color: "#FFFFFF"     # 主色上的文字顏色
+  text-light-primary-color: "#212121"  # 淺色上的文字顏色
+  disabled-text-color: "#BDBDBD"    # 禁用文字顏色
+
+  # =========================
+  # 2) RGB 顏色變數（用於透明度計算）
+  # =========================
+  rgb-primary-color: "98, 132, 253"        # 主色 RGB
+  rgb-accent-color: "98, 132, 253"         # 強調色 RGB
+  rgb-primary-text-color: "33, 33, 33"     # 主文字 RGB
+  rgb-secondary-text-color: "95, 99, 104"  # 次文字 RGB
+  rgb-text-primary-color: "255, 255, 255"  # 白色文字 RGB
+  rgb-card-background-color: "255, 255, 255"  # 卡片背景 RGB
+
+  # =========================
+  # 3) 狀態顏色（Status Colors）
+  # =========================
+  error-color: "#DB4437"            # 錯誤顏色
+  warning-color: "#FFA600"          # 警告顏色
+  success-color: "#43A047"          # 成功顏色
+  info-color: "#039BE5"             # 資訊顏色
+
+  rgb-error-color: "219, 68, 55"    # 錯誤 RGB
+  rgb-warning-color: "255, 166, 0"  # 警告 RGB
+  rgb-success-color: "67, 160, 71"  # 成功 RGB
+  rgb-info-color: "3, 155, 229"     # 資訊 RGB
+
+  # =========================
+  # 4) 互動元件 / 圖示一致性（把常見會分裂的顏色也一起壓成品牌藍）
+  # =========================
+  app-header-background-color: "#6284FD"   # 頂部 Header 背景色
+  app-header-text-color: "#FFFFFF"         # 頂部 Header 文字色
+  paper-item-icon-active-color: "#6284FD"  # 清單項目 icon 的 active 狀態色
+  switch-checked-color: "#6284FD"          # 開關打開（checked）時的顏色
+  slider-color: "#6284FD"                  # 滑桿（slider）顏色
+  slider-secondary-color: "#A4B8FE"        # 滑桿次要顏色
+  link-color: "#6284FD"                    # 連結文字顏色
+
+  paper-item-icon-color: "#6284FD"         # 一般狀態 icon 顏色（舊版/部分元件仍會吃）
+  state-icon-color: "#6284FD"              # 狀態 icon 顏色（例如 entity 小圖示）
+  state-icon-active-color: "#6284FD"       # 狀態 icon 的 active 顏色（例如燈開啟）
+  state-icon-unavailable-color: "#9E9E9E"  # 不可用狀態 icon 顏色（保留灰色更直覺）
+
+  # =========================
+  # 5) 卡片圓角（Card Border Radius）
+  # =========================
+  card-border-radius: "26px"               # 卡片圓角（Lovelace 卡片常用）
+  ha-card-border-radius: "26px"            # 新版常見的卡片圓角變數（更通用）
+  paper-card-border-radius: "26px"         # 舊版 paper-card 系列元件可能會吃這個
+  dialog-border-radius: "32px"             # 對話框/彈窗圓角
+
+  # =========================
+  # 6) MDC 主題整合（Material Design Components）
+  # =========================
+  mdc-theme-primary: "var(--primary-color)"
+  mdc-theme-secondary: "var(--accent-color)"
+  mdc-theme-background: "var(--primary-background-color)"
+  mdc-theme-surface: "var(--card-background-color)"
+  mdc-theme-on-primary: "var(--text-primary-color)"
+  mdc-theme-on-secondary: "var(--text-primary-color)"
+  mdc-theme-on-surface: "var(--primary-text-color)"
+  mdc-theme-error: "var(--error-color)"
+  mdc-theme-text-disabled-on-light: "var(--disabled-text-color)"
+  mdc-theme-text-primary-on-background: "var(--primary-text-color)"
+  mdc-theme-text-secondary-on-background: "var(--secondary-text-color)"
+  mdc-theme-text-hint-on-background: "var(--secondary-text-color)"
+  mdc-theme-text-icon-on-background: "var(--secondary-text-color)"
+
+  # MDC 控件
+  mdc-checkbox-unchecked-color: "rgba(var(--rgb-primary-text-color), 0.54)"
+  mdc-checkbox-disabled-color: "var(--disabled-text-color)"
+  mdc-radio-unchecked-color: "rgba(var(--rgb-primary-text-color), 0.54)"
+  mdc-radio-disabled-color: "var(--disabled-text-color)"
+  mdc-button-disabled-ink-color: "var(--disabled-text-color)"
+  mdc-button-outline-color: "var(--outline-color)"
+  mdc-tab-text-label-color-default: "var(--primary-text-color)"
+
+  # MDC 對話框
+  mdc-dialog-scroll-divider-color: "var(--divider-color)"
+  mdc-dialog-heading-ink-color: "var(--primary-text-color)"
+  mdc-dialog-content-ink-color: "var(--primary-text-color)"
+
+  # MDC 文字欄位
+  mdc-text-field-idle-line-color: "var(--input-idle-line-color)"
+  mdc-text-field-hover-line-color: "var(--input-hover-line-color)"
+  mdc-text-field-disabled-line-color: "var(--input-disabled-line-color)"
+  mdc-text-field-outlined-idle-border-color: "var(--input-outlined-idle-border-color)"
+  mdc-text-field-outlined-hover-border-color: "var(--input-outlined-hover-border-color)"
+  mdc-text-field-outlined-disabled-border-color: "var(--input-outlined-disabled-border-color)"
+  mdc-text-field-fill-color: "var(--input-fill-color)"
+  mdc-text-field-disabled-fill-color: "var(--input-disabled-fill-color)"
+  mdc-text-field-ink-color: "var(--input-ink-color)"
+  mdc-text-field-label-ink-color: "var(--input-label-ink-color)"
+  mdc-text-field-disabled-ink-color: "var(--input-disabled-ink-color)"
+
+  # MDC 選擇器
+  mdc-select-idle-line-color: "var(--input-idle-line-color)"
+  mdc-select-hover-line-color: "var(--input-hover-line-color)"
+  mdc-select-outlined-idle-border-color: "var(--input-outlined-idle-border-color)"
+  mdc-select-outlined-hover-border-color: "var(--input-outlined-hover-border-color)"
+  mdc-select-outlined-disabled-border-color: "var(--input-outlined-disabled-border-color)"
+  mdc-select-fill-color: "var(--input-fill-color)"
+  mdc-select-disabled-fill-color: "var(--input-disabled-fill-color)"
+  mdc-select-ink-color: "var(--input-ink-color)"
+  mdc-select-label-ink-color: "var(--input-label-ink-color)"
+  mdc-select-disabled-ink-color: "var(--input-disabled-ink-color)"
+  mdc-select-dropdown-icon-color: "var(--input-dropdown-icon-color)"
+  mdc-select-disabled-dropdown-icon-color: "var(--input-disabled-ink-color)"
+
+  # =========================
+  # 7) 標籤徽章顏色（Label Badge）
+  # =========================
+  label-badge-grey: "#9E9E9E"
+  label-badge-red: "var(--error-color)"
+  label-badge-blue: "var(--info-color)"
+  label-badge-green: "var(--success-color)"
+  label-badge-yellow: "var(--warning-color)"
+  label-badge-background-color: "var(--card-background-color)"
+  label-badge-text-color: "rgba(var(--rgb-primary-text-color), 0.8)"
+
+  # =========================
+  # 8) 表格顏色（Table Colors）
+  # =========================
+  table-header-background-color: "var(--input-fill-color)"
+  table-row-background-color: "var(--primary-background-color)"
+  table-row-alternative-background-color: "var(--secondary-background-color)"
+  data-table-background-color: "var(--card-background-color)"
+
+  # =========================
+  # 9) 雙模式（Light / Dark）細節
+  # =========================
+  modes:
+    light:
+      # 背景顏色
+      primary-background-color: "#FAFAFA"          # 主要背景（整體底色）
+      secondary-background-color: "#E5E5E5"        # 次背景（HA 標準）
+      card-background-color: "#FFFFFF"             # 卡片背景
+      paper-card-background-color: "#FFFFFF"       # 舊版卡片背景（保險用）
+      ha-card-background: "#FFFFFF"               # 新版卡片背景（現代等效）
+      clear-background-color: "#FFFFFF"            # 清除背景色
+
+      # 文字顏色
+      primary-text-color: "#212121"                # 主文字顏色
+      secondary-text-color: "#5F6368"              # 次文字顏色（說明/副標）
+      disabled-text-color: "#BDBDBD"               # 禁用文字顏色
+
+      # RGB 變數（用於透明度計算）
+      rgb-primary-text-color: "33, 33, 33"
+      rgb-secondary-text-color: "95, 99, 104"
+      rgb-card-background-color: "255, 255, 255"
+
+      # 分隔線和邊框
+      divider-color: "rgba(0, 0, 0, 0.12)"         # 分隔線顏色
+      outline-color: "rgba(0, 0, 0, 0.12)"         # 邊框顏色
+      outline-hover-color: "rgba(0, 0, 0, 0.24)"   # 懸停邊框
+      shadow-color: "rgba(0, 0, 0, 0.16)"          # 陰影顏色
+      scrollbar-thumb-color: "rgb(194, 194, 194)"  # 滾動條顏色
+
+      # 側邊欄
+      sidebar-background-color: "#F4F6F8"          # 側邊欄背景
+      sidebar-text-color: "#37474F"                # 側邊欄文字
+      sidebar-icon-color: "#607D8B"                # 側邊欄 icon
+      sidebar-selected-background-color: "rgba(98, 132, 253, 0.15)" # 側邊欄選中底色
+      sidebar-selected-text-color: "#6284FD"       # 側邊欄選中文字
+      sidebar-selected-icon-color: "#6284FD"       # 側邊欄選中 icon
+
+      # 輸入欄位
+      input-idle-line-color: "rgba(0, 0, 0, 0.42)"
+      input-hover-line-color: "rgba(0, 0, 0, 0.87)"
+      input-disabled-line-color: "rgba(0, 0, 0, 0.06)"
+      input-outlined-idle-border-color: "rgba(0, 0, 0, 0.38)"
+      input-outlined-hover-border-color: "rgba(0, 0, 0, 0.87)"
+      input-outlined-disabled-border-color: "rgba(0, 0, 0, 0.06)"
+      input-fill-color: "rgb(245, 245, 245)"
+      input-disabled-fill-color: "rgb(250, 250, 250)"
+      input-ink-color: "rgba(0, 0, 0, 0.87)"
+      input-label-ink-color: "rgba(0, 0, 0, 0.6)"
+      input-disabled-ink-color: "rgba(0, 0, 0, 0.37)"
+      input-dropdown-icon-color: "rgba(0, 0, 0, 0.54)"
+
+      # 開關
+      switch-checked-button-color: "var(--primary-background-color)"
+      switch-checked-track-color: "#000000"
+      switch-unchecked-button-color: "var(--primary-background-color)"
+      switch-unchecked-track-color: "#000000"
+
+    dark:
+      # 背景顏色
+      primary-background-color: "#121212"          # 主要背景（暗色底）
+      secondary-background-color: "#282828"        # 次背景（HA 標準暗色）
+      card-background-color: "#1C1C1C"             # 卡片背景（HA 標準）
+      paper-card-background-color: "#1C1C1C"       # 舊版卡片背景
+      ha-card-background: "#1C1C1C"               # 新版卡片背景（現代等效）
+      clear-background-color: "#121212"            # 清除背景色
+
+      # 文字顏色
+      primary-text-color: "#E1E1E1"                # 主文字（HA 標準）
+      secondary-text-color: "#9B9B9B"              # 次文字（HA 標準）
+      disabled-text-color: "#6F6F6F"               # 禁用文字顏色
+
+      # RGB 變數
+      rgb-primary-text-color: "225, 225, 225"
+      rgb-secondary-text-color: "155, 155, 155"
+      rgb-card-background-color: "28, 28, 28"
+
+      # 分隔線和邊框
+      divider-color: "rgba(225, 225, 225, 0.12)"   # 分隔線顏色
+      outline-color: "rgba(225, 225, 225, 0.12)"   # 邊框顏色
+      outline-hover-color: "rgba(225, 225, 225, 0.24)"  # 懸停邊框
+      shadow-color: "rgba(0, 0, 0, 0.48)"          # 陰影顏色
+      scrollbar-thumb-color: "rgb(100, 100, 100)"  # 滾動條顏色
+
+      # Header 暗色調整
+      app-header-background-color: "#101E24"       # 暗色 Header
+      app-header-text-color: "#E1E1E1"             # 暗色 Header 文字
+
+      # 側邊欄
+      sidebar-background-color: "#1A1A1A"          # 側邊欄背景
+      sidebar-text-color: "#CFD8DC"                # 側邊欄文字
+      sidebar-icon-color: "#B0BEC5"                # 側邊欄 icon
+      sidebar-selected-background-color: "rgba(98, 132, 253, 0.25)" # 側邊欄選中底色
+      sidebar-selected-text-color: "#6284FD"       # 側邊欄選中文字
+      sidebar-selected-icon-color: "#6284FD"       # 側邊欄選中 icon
+
+      # 輸入欄位
+      input-idle-line-color: "rgba(255, 255, 255, 0.42)"
+      input-hover-line-color: "rgba(255, 255, 255, 0.87)"
+      input-disabled-line-color: "rgba(255, 255, 255, 0.06)"
+      input-outlined-idle-border-color: "rgba(255, 255, 255, 0.38)"
+      input-outlined-hover-border-color: "rgba(255, 255, 255, 0.87)"
+      input-outlined-disabled-border-color: "rgba(255, 255, 255, 0.06)"
+      input-fill-color: "rgba(255, 255, 255, 0.05)"
+      input-disabled-fill-color: "rgba(255, 255, 255, 0.02)"
+      input-ink-color: "rgba(255, 255, 255, 0.87)"
+      input-label-ink-color: "rgba(255, 255, 255, 0.6)"
+      input-disabled-ink-color: "rgba(255, 255, 255, 0.37)"
+      input-dropdown-icon-color: "rgba(255, 255, 255, 0.54)"
+
+      # 開關
+      switch-checked-button-color: "var(--primary-background-color)"
+      switch-checked-track-color: "#9B9B9B"
+      switch-unchecked-button-color: "#999999"
+      switch-unchecked-track-color: "#9B9B9B"
+
+      # MDC 暗色調整
+      mdc-ripple-color: "#AAAAAA"
+      mdc-linear-progress-buffer-color: "rgba(255, 255, 255, 0.1)"
