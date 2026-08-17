@@ -1,0 +1,31 @@
+name: Build combined theme file
+
+# HACS 的 theme 類別一個 repo 只會安裝一個 yaml，所以把 themes/*.yaml 合併成
+# themes/woow_ha_themes.yaml（hacs.json 的 filename 指向它）。來源檔照常各自編輯。
+
+on:
+  push:
+    branches: [main]
+    paths: ["themes/**", "scripts/build_combined_theme.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml
+      - run: python3 scripts/build_combined_theme.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- themes/woow_ha_themes.yaml; then echo "no change"; exit 0; fi
+          git config user.name "theme-build[bot]"
+          git config user.email "theme-build@users.noreply.github.com"
+          git add themes/woow_ha_themes.yaml
+          git commit -m "chore: rebuild themes/woow_ha_themes.yaml"
+          git push

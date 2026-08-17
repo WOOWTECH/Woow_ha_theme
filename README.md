@@ -217,11 +217,15 @@ graph LR
 4. 類別選擇 `Theme`
 5. 安裝後重啟 Home Assistant
 
+> **注意**
+> - HACS 的 theme 類別一個 repo 只會安裝**一個** yaml，所以 HACS 裝的是 `themes/woow_ha_themes.yaml`——它由 CI 從 `themes/*.yaml` 各來源檔自動合併產生（`scripts/build_combined_theme.py`），**請勿手動編輯**；改來源檔後 push 到 main 會自動重建。
+> - HACS **不會**安裝 `www/` 底下的背景圖（Frosted Glass / iOS / visionOS 主題引用 `/local/...`），請手動把 `www/` 內容複製到 HA 的 `config/www/`。
+
 ### 方法二：手動安裝
 
 ```bash
-# 1. 複製主題檔案
-cp themes/*.yaml /config/themes/
+# 1. 複製主題檔案（個別來源檔；不要同時複製合併檔 woow_ha_themes.yaml，避免重複定義）
+cp $(ls themes/*.yaml | grep -v woow_ha_themes.yaml) /config/themes/
 
 # 2. 複製靜態資源
 cp -r www/* /config/www/
