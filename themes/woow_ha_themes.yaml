@@ -4617,375 +4617,428 @@ Liquid Glass:
 # GENERATED - do not edit. Source: sources/glass.tokens.yaml
 # Rebuild: python3 scripts/build_glass_themes.py
 VisionOS 26:
-  ha-color-primary-05: '#221706'
-  ha-color-neutral-05: '#151514'
-  ha-color-primary-10: '#3f2a0a'
-  ha-color-neutral-10: '#262423'
-  ha-color-primary-20: '#7c510c'
-  ha-color-neutral-20: '#474441'
-  ha-color-primary-30: '#c07809'
-  ha-color-neutral-30: '#69645e'
-  ha-color-primary-40: '#ff9f0a'
-  ha-color-neutral-40: '#8a847c'
-  ha-color-primary-50: '#f6ad3b'
-  ha-color-neutral-50: '#9d9892'
-  ha-color-primary-60: '#f0bb69'
-  ha-color-neutral-60: '#afaca8'
-  ha-color-primary-70: '#eeca93'
-  ha-color-neutral-70: '#c2c0bd'
-  ha-color-primary-80: '#efdab9'
-  ha-color-neutral-80: '#d5d4d2'
-  ha-color-primary-90: '#f5ebdc'
-  ha-color-neutral-90: '#e9e8e7'
-  ha-color-primary-95: '#f9f4ec'
-  ha-color-neutral-95: '#f3f2f2'
-  ha-border-radius-lg: 12px
-  ha-border-radius-xl: 16px
-  ha-border-radius-2xl: 20px
-  ha-border-radius-3xl: 24px
-  ha-font-family-heading: var(--ha-font-family-body)
-  ha-card-border-radius: 20px
-  ha-card-border-width: 1px
-  ha-card-backdrop-filter: blur(20px) saturate(160%)
-  ha-badge-border-radius: 20px
-  ha-dialog-border-radius: 24px
-  ha-dialog-surface-backdrop-filter: blur(20px) saturate(160%)
-  ha-dialog-scrim-backdrop-filter: blur(6px) brightness(60%)
-  dialog-backdrop-filter: blur(20px) saturate(160%)
-  ha-bottom-sheet-border-radius: 28px
-  ha-bottom-sheet-surface-backdrop-filter: blur(20px) saturate(160%)
-  ha-bottom-sheet-scrim-backdrop-filter: blur(6px) brightness(60%)
-  app-header-backdrop-filter: blur(20px) saturate(160%)
-  ha-view-sections-column-gap: 16px
-  ha-view-sections-row-gap: 16px
-  ha-section-border-radius: 20px
-  ha-section-grid-column-gap: 12px
-  ha-section-grid-row-gap: 12px
-  ha-tile-icon-border-radius: 14px
-  tile-icon-border-radius: 14px
-  ha-card-features-border-radius: 14px
-  feature-border-radius: 14px
-  ha-card-feature-gap: 8px
+  ha-color-neutral-05: '#1C1C1E'
+  ha-color-neutral-10: '#2C2C2E'
+  ha-color-neutral-20: '#3A3A3C'
+  ha-color-neutral-30: '#48484A'
+  ha-color-neutral-40: '#636366'
+  ha-color-neutral-50: '#8E8E93'
+  ha-color-neutral-60: '#AEAEB2'
+  ha-color-neutral-70: '#C7C7CC'
+  ha-color-neutral-80: '#D1D1D6'
+  ha-color-neutral-90: '#E5E5EA'
+  ha-color-neutral-95: '#F2F2F7'
+  ha-font-family-body: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  ha-font-family-heading: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  ha-font-weight-heading: '700'
+  ha-font-weight-action: '600'
+  ha-line-height-normal: '1.29'
+  ha-border-radius-sm: 6px
+  ha-border-radius-md: 10px
+  ha-border-radius-lg: 10px
+  ha-border-radius-xl: 18px
+  ha-border-radius-2xl: 22px
+  ha-border-radius-3xl: 16px
+  ha-card-border-radius: 22px
+  ha-badge-border-radius: 9999px
+  ha-section-border-radius: 22px
+  ha-tile-icon-border-radius: 10px
+  tile-icon-border-radius: 10px
+  ha-card-features-border-radius: 10px
+  feature-border-radius: 10px
+  ha-dialog-border-radius: 14px
+  ha-bottom-sheet-border-radius: 16px
   ha-button-border-radius: 9999px
+  wa-border-radius-pill: 9999px
   ha-checkbox-border-radius: 6px
   ha-tooltip-border-radius: 10px
-  wa-panel-border-radius: 20px
-  wa-border-radius-l: 12px
-  wa-border-radius-pill: 9999px
-  wa-form-control-border-radius: 12px
-  red-color: '#FF453A'
-  orange-color: '#FF9F0A'
-  yellow-color: '#FFD60A'
-  green-color: '#32D74B'
-  teal-color: '#6AC4DC'
-  cyan-color: '#5AC8F5'
-  blue-color: '#0A84FF'
-  indigo-color: '#5E5CE6'
-  purple-color: '#BF5AF2'
-  pink-color: '#FF375F'
-  brown-color: '#AC8E68'
-  light-blue-color: '#66D4CF'
-  error-color: '#FF453A'
-  warning-color: '#FF9F0A'
-  success-color: '#32D74B'
-  info-color: '#0A84FF'
-  rgb-error-color: 255, 69, 58
-  rgb-warning-color: 255, 159, 10
-  rgb-success-color: 50, 215, 75
-  rgb-info-color: 10, 132, 255
-  primary-color: '#ff9f0a'
-  accent-color: '#f6ad3b'
-  rgb-primary-color: 255, 159, 10
-  app-theme-color: '#ff9f0a'
-  ha-color-focus: '#f6ad3b'
-  wa-focus-ring-color: '#f6ad3b'
+  wa-panel-border-radius: 22px
+  wa-border-radius-l: 10px
+  wa-form-control-border-radius: 10px
+  ha-card-feature-gap: 8px
+  ha-view-sections-column-gap: 16px
+  ha-view-sections-row-gap: 16px
+  ha-section-grid-column-gap: 12px
+  ha-section-grid-row-gap: 12px
+  ha-switch-width: 51px
+  ha-switch-size: 31px
+  ha-switch-thumb-size: 27px
+  ha-checkbox-size: 22px
+  ha-button-height: 44px
+  wa-form-control-height: 44px
+  ha-card-backdrop-filter: blur(20px) saturate(180%)
+  app-header-backdrop-filter: blur(20px) saturate(180%)
+  ha-dialog-surface-backdrop-filter: blur(20px) saturate(180%)
+  ha-bottom-sheet-surface-backdrop-filter: blur(20px) saturate(180%)
+  dialog-backdrop-filter: blur(20px) saturate(180%)
+  ha-dialog-scrim-backdrop-filter: blur(4px) brightness(55%)
+  ha-bottom-sheet-scrim-backdrop-filter: blur(4px) brightness(55%)
+  ha-card-border-width: '0'
   modes:
     light:
-      background-image: 'center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #8c8378 0%, #6f675e 45%, #4a453f 100%)'
-      lovelace-background: 'center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #8c8378 0%, #6f675e 45%, #4a453f 100%)'
-      primary-background-color: 'linear-gradient(160deg, #8c8378 0%, #6f675e 45%, #4a453f 100%)'
-      secondary-background-color: rgba(255, 255, 255, 0.10)
-      clear-background-color: rgba(150, 145, 138, 0.30)
+      primary-background-color: '#F2F1EE'
+      secondary-background-color: '#FFFFFF'
+      card-background-color: '#FFFFFF'
+      material-background-color: '#FFFFFF'
+      sidebar-background-color: '#FFFFFF'
+      table-row-alternative-background-color: '#f8f8f9'
+      mdc-theme-surface: '#FFFFFF'
+      lovelace-background: 'center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)'
+      background-image: 'center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)'
+      ha-card-background: rgba(255, 255, 255, 0.60)
+      clear-background-color: rgba(255, 255, 255, 0.60)
       app-header-background-color: transparent
-      ha-color-text-primary: rgba(255, 255, 255, 0.96)
-      ha-color-text-secondary: rgba(255, 255, 255, 0.66)
-      ha-color-text-disabled: rgba(255, 255, 255, 0.36)
-      ha-color-text-link: '#f6ad3b'
-      primary-text-color: rgba(255, 255, 255, 0.96)
-      secondary-text-color: rgba(255, 255, 255, 0.66)
-      disabled-text-color: rgba(255, 255, 255, 0.36)
-      text-primary-color: rgba(255, 255, 255, 0.96)
-      text-dark-color: rgba(255, 255, 255, 0.96)
-      rgb-primary-text-color: 255, 255, 255
-      lumo-body-text-color: rgba(255, 255, 255, 0.96)
-      ha-color-surface-default: rgba(150, 145, 138, 0.30)
-      ha-color-surface-low: rgba(255, 255, 255, 0.10)
-      ha-color-surface-lower: rgba(255, 255, 255, 0.16)
-      ha-color-on-surface-default: rgba(255, 255, 255, 0.96)
-      ha-color-form-background: rgba(255, 255, 255, 0.10)
-      ha-color-form-hover: rgba(255, 255, 255, 0.16)
-      ha-color-form-disabled: rgba(255, 255, 255, 0.14)
-      ha-card-background: rgba(150, 145, 138, 0.30)
-      ha-card-border-color: rgba(255, 255, 255, 0.30)
-      ha-card-box-shadow: 0 1px 2px rgba(0,0,0,0.20), 0 10px 30px rgba(0,0,0,0.28)
-      card-background-color: rgba(150, 145, 138, 0.30)
-      ha-dialog-surface-background: rgba(255, 255, 255, 0.16)
-      ha-bottom-sheet-surface-background: rgba(255, 255, 255, 0.16)
-      ha-bottom-sheet-handle-color: rgba(255, 255, 255, 0.36)
-      material-background-color: rgba(255, 255, 255, 0.16)
-      divider-color: rgba(255, 255, 255, 0.14)
-      outline-color: rgba(255, 255, 255, 0.14)
-      outline-hover-color: rgba(255, 255, 255, 0.30)
-      ha-color-border-neutral-quiet: rgba(255, 255, 255, 0.14)
-      ha-color-border-neutral-normal: rgba(255, 255, 255, 0.30)
-      ha-color-border-neutral-loud: rgba(255, 255, 255, 0.66)
-      ha-color-border-primary-quiet: rgba(255, 159, 10, 0.25)
-      ha-color-border-primary-normal: '#ff9f0a'
-      ha-color-fill-neutral-quiet-resting: rgba(255, 255, 255, 0.14)
-      ha-color-fill-neutral-quiet-hover: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-quiet-active: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-normal-resting: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-normal-hover: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-loud-resting: rgba(255, 255, 255, 0.66)
-      ha-color-fill-primary-quiet-resting: rgba(255, 159, 10, 0.16)
-      ha-color-fill-primary-quiet-hover: rgba(255, 159, 10, 0.24)
-      ha-color-fill-primary-quiet-active: rgba(255, 159, 10, 0.3)
-      ha-color-fill-primary-normal-resting: '#ff9f0a'
-      ha-color-fill-primary-normal-hover: '#f6ad3b'
-      ha-color-fill-primary-normal-active: '#c07809'
-      ha-color-fill-primary-loud-resting: '#ff9f0a'
-      ha-color-fill-primary-loud-hover: '#f6ad3b'
-      ha-color-fill-primary-loud-active: '#c07809'
-      ha-color-fill-disabled-quiet-resting: rgba(255, 255, 255, 0.14)
-      ha-color-fill-disabled-normal-resting: rgba(255, 255, 255, 0.14)
-      ha-color-on-neutral-quiet: rgba(255, 255, 255, 0.96)
-      ha-color-on-neutral-normal: rgba(255, 255, 255, 0.96)
-      ha-color-on-neutral-loud: '#ffffff'
-      ha-color-on-primary-quiet: '#f6ad3b'
+      ha-dialog-surface-background: rgba(246, 246, 246, 0.84)
+      ha-bottom-sheet-surface-background: rgba(246, 246, 246, 0.84)
+      ha-bottom-sheet-handle-color: rgba(60, 60, 67, 0.30)
+      ha-card-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
+      dialog-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
+      ha-color-text-primary: '#000000'
+      ha-color-text-secondary: rgba(60, 60, 67, 0.60)
+      ha-color-text-disabled: rgba(60, 60, 67, 0.30)
+      ha-color-text-link: '#ff9500'
+      primary-text-color: '#000000'
+      secondary-text-color: rgba(60, 60, 67, 0.60)
+      disabled-text-color: rgba(60, 60, 67, 0.30)
+      text-primary-color: '#000000'
+      text-dark-color: '#000000'
+      rgb-primary-text-color: 0, 0, 0
+      lumo-body-text-color: '#000000'
+      ha-color-surface-default: '#FFFFFF'
+      ha-color-surface-low: '#F2F1EE'
+      ha-color-surface-lower: '#e6e5e3'
+      ha-color-on-surface-default: '#000000'
+      ha-color-form-background: rgba(118, 118, 128, 0.12)
+      ha-color-form-hover: rgba(120, 120, 128, 0.16)
+      ha-color-form-disabled: rgba(118, 118, 128, 0.12)
+      divider-color: rgba(60, 60, 67, 0.29)
+      outline-color: rgba(60, 60, 67, 0.29)
+      outline-hover-color: rgba(60, 60, 67, 0.30)
+      ha-color-border-neutral-quiet: rgba(60, 60, 67, 0.29)
+      ha-color-border-neutral-normal: rgba(60, 60, 67, 0.29)
+      ha-color-border-neutral-loud: rgba(60, 60, 67, 0.60)
+      ha-color-border-primary-quiet: rgba(255, 149, 0, 0.25)
+      ha-color-border-primary-normal: '#ff9500'
+      ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.12)
+      ha-color-fill-neutral-quiet-hover: rgba(120, 120, 128, 0.16)
+      ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.20)
+      ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.16)
+      ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.20)
+      ha-color-fill-neutral-loud-resting: rgba(60, 60, 67, 0.60)
+      ha-color-fill-primary-quiet-resting: rgba(255, 149, 0, 0.14)
+      ha-color-fill-primary-quiet-hover: rgba(255, 149, 0, 0.22)
+      ha-color-fill-primary-quiet-active: rgba(255, 149, 0, 0.28)
+      ha-color-fill-primary-normal-resting: '#ff9500'
+      ha-color-fill-primary-normal-hover: '#bf7103'
+      ha-color-fill-primary-normal-active: '#7f4c06'
+      ha-color-fill-primary-loud-resting: '#ff9500'
+      ha-color-fill-primary-loud-hover: '#bf7103'
+      ha-color-fill-primary-loud-active: '#7f4c06'
+      ha-color-fill-disabled-quiet-resting: rgba(118, 118, 128, 0.12)
+      ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.12)
+      ha-color-on-neutral-quiet: '#000000'
+      ha-color-on-neutral-normal: '#000000'
+      ha-color-on-neutral-loud: '#F2F1EE'
+      ha-color-on-primary-quiet: '#bf7103'
       ha-color-on-primary-normal: '#ffffff'
       ha-color-on-primary-loud: '#ffffff'
-      ha-color-on-disabled-quiet: rgba(255, 255, 255, 0.36)
-      ha-color-on-disabled-normal: rgba(255, 255, 255, 0.36)
-      wa-color-brand-fill-loud: '#ff9f0a'
-      wa-color-brand-fill-normal: rgba(255, 159, 10, 0.24)
-      wa-color-brand-fill-quiet: rgba(255, 159, 10, 0.14)
-      wa-color-brand-border-loud: '#ff9f0a'
-      wa-color-brand-border-normal: rgba(255, 159, 10, 0.55)
-      wa-color-brand-border-quiet: rgba(255, 159, 10, 0.28)
+      ha-color-on-disabled-quiet: rgba(60, 60, 67, 0.30)
+      ha-color-on-disabled-normal: rgba(60, 60, 67, 0.30)
+      wa-color-brand-fill-loud: '#ff9500'
+      wa-color-brand-fill-normal: rgba(255, 149, 0, 0.16)
+      wa-color-brand-fill-quiet: rgba(255, 149, 0, 0.1)
+      wa-color-brand-border-loud: '#ff9500'
+      wa-color-brand-border-normal: rgba(255, 149, 0, 0.45)
+      wa-color-brand-border-quiet: rgba(255, 149, 0, 0.22)
       wa-color-brand-on-loud: '#ffffff'
-      wa-color-brand-on-normal: '#f6ad3b'
-      wa-color-brand-on-quiet: '#f6ad3b'
-      wa-color-neutral-fill-loud: rgba(255, 255, 255, 0.66)
-      wa-color-neutral-fill-normal: rgba(255, 255, 255, 0.22)
-      wa-color-neutral-fill-quiet: rgba(255, 255, 255, 0.14)
-      wa-color-neutral-border-loud: rgba(255, 255, 255, 0.66)
-      wa-color-neutral-border-normal: rgba(255, 255, 255, 0.30)
-      wa-color-neutral-border-quiet: rgba(255, 255, 255, 0.14)
-      wa-color-neutral-on-loud: '#ffffff'
-      wa-color-neutral-on-normal: rgba(255, 255, 255, 0.96)
-      wa-color-neutral-on-quiet: rgba(255, 255, 255, 0.96)
-      wa-color-text-normal: rgba(255, 255, 255, 0.96)
-      wa-color-text-quiet: rgba(255, 255, 255, 0.66)
-      wa-color-surface-default: rgba(150, 145, 138, 0.30)
-      wa-color-surface-raised: rgba(255, 255, 255, 0.16)
-      wa-color-surface-border: rgba(255, 255, 255, 0.30)
-      wa-form-control-background-color: rgba(255, 255, 255, 0.14)
-      wa-form-control-border-color: rgba(255, 255, 255, 0.30)
-      wa-form-control-value-color: rgba(255, 255, 255, 0.96)
-      wa-form-control-placeholder-color: rgba(255, 255, 255, 0.36)
-      sidebar-background-color: rgba(255, 255, 255, 0.10)
-      sidebar-text-color: rgba(255, 255, 255, 0.66)
-      sidebar-icon-color: rgba(255, 255, 255, 0.66)
-      sidebar-selected-icon-color: '#ff9f0a'
+      wa-color-brand-on-normal: '#bf7103'
+      wa-color-brand-on-quiet: '#bf7103'
+      wa-color-neutral-fill-loud: rgba(60, 60, 67, 0.60)
+      wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.16)
+      wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.12)
+      wa-color-neutral-border-loud: rgba(60, 60, 67, 0.60)
+      wa-color-neutral-border-normal: rgba(60, 60, 67, 0.29)
+      wa-color-neutral-border-quiet: rgba(60, 60, 67, 0.29)
+      wa-color-neutral-on-loud: '#F2F1EE'
+      wa-color-neutral-on-normal: '#000000'
+      wa-color-neutral-on-quiet: '#000000'
+      wa-color-text-normal: '#000000'
+      wa-color-text-quiet: rgba(60, 60, 67, 0.60)
+      wa-color-surface-default: '#FFFFFF'
+      wa-color-surface-raised: '#FFFFFF'
+      wa-color-surface-border: rgba(60, 60, 67, 0.29)
+      wa-form-control-background-color: rgba(118, 118, 128, 0.12)
+      wa-form-control-border-color: rgba(60, 60, 67, 0.29)
+      wa-form-control-value-color: '#000000'
+      wa-form-control-placeholder-color: rgba(60, 60, 67, 0.30)
+      sidebar-text-color: rgba(60, 60, 67, 0.60)
+      sidebar-icon-color: rgba(60, 60, 67, 0.60)
+      sidebar-selected-icon-color: '#ff9500'
       sidebar-menu-button-background-color: transparent
-      sidebar-menu-button-text-color: rgba(255, 255, 255, 0.96)
-      state-icon-color: rgba(255, 255, 255, 0.66)
-      state-icon-active-color: '#ff9f0a'
-      state-icon-unavailable-color: rgba(255, 255, 255, 0.36)
-      state-inactive-color: rgba(255, 255, 255, 0.36)
-      ha-tile-info-primary-color: rgba(255, 255, 255, 0.96)
-      ha-tile-info-secondary-color: rgba(255, 255, 255, 0.66)
-      tile-icon-color: rgba(255, 255, 255, 0.66)
-      ha-heading-card-title-color: rgba(255, 255, 255, 0.96)
-      ha-heading-card-subtitle-color: rgba(255, 255, 255, 0.66)
-      input-ink-color: rgba(255, 255, 255, 0.96)
-      input-fill-color: transparent
-      input-disabled-fill-color: transparent
-      input-label-ink-color: rgba(255, 255, 255, 0.66)
-      input-disabled-ink-color: rgba(255, 255, 255, 0.36)
-      input-dropdown-icon-color: rgba(255, 255, 255, 0.66)
-      input-idle-line-color: rgba(255, 255, 255, 0.14)
-      input-hover-line-color: rgba(255, 255, 255, 0.30)
-      switch-checked-track-color: '#ff9f0a'
+      sidebar-menu-button-text-color: '#000000'
+      state-icon-color: '#8E8E93'
+      state-icon-active-color: '#ff9500'
+      state-icon-unavailable-color: rgba(60, 60, 67, 0.30)
+      state-inactive-color: rgba(60, 60, 67, 0.30)
+      ha-tile-info-primary-color: '#000000'
+      ha-tile-info-secondary-color: rgba(60, 60, 67, 0.60)
+      tile-icon-color: '#8E8E93'
+      ha-heading-card-title-color: '#000000'
+      ha-heading-card-subtitle-color: rgba(60, 60, 67, 0.60)
+      input-ink-color: '#000000'
+      input-fill-color: rgba(118, 118, 128, 0.12)
+      input-disabled-fill-color: rgba(118, 118, 128, 0.12)
+      input-label-ink-color: rgba(60, 60, 67, 0.60)
+      input-disabled-ink-color: rgba(60, 60, 67, 0.30)
+      input-dropdown-icon-color: rgba(60, 60, 67, 0.60)
+      input-idle-line-color: rgba(60, 60, 67, 0.29)
+      input-hover-line-color: rgba(60, 60, 67, 0.30)
+      switch-checked-track-color: '#ff9500'
       switch-checked-button-color: '#ffffff'
-      switch-unchecked-track-color: rgba(255, 255, 255, 0.22)
+      switch-unchecked-track-color: '#C7C7CC'
       switch-unchecked-button-color: '#ffffff'
-      ha-switch-checked-background-color: '#ff9f0a'
-      ha-checkbox-checked-background-color: '#ff9f0a'
+      ha-switch-checked-background-color: '#ff9500'
+      ha-switch-checked-thumb-color: '#ffffff'
+      ha-checkbox-checked-background-color: '#ff9500'
       ha-checkbox-checked-icon-color: '#ffffff'
-      ha-checkbox-border-color: rgba(255, 255, 255, 0.22)
-      slider-color: '#ff9f0a'
-      slider-secondary-color: rgba(255, 255, 255, 0.16)
-      slider-track-color: rgba(255, 255, 255, 0.22)
-      table-row-background-color: transparent
-      table-row-alternative-background-color: rgba(255, 255, 255, 0.10)
-      data-table-background-color: transparent
-      markdown-code-background-color: rgba(255, 255, 255, 0.10)
-      code-editor-background-color: rgba(255, 255, 255, 0.10)
-      markdown-link-color: '#f6ad3b'
-      ha-tooltip-background-color: rgba(255, 255, 255, 0.16)
-      ha-tooltip-text-color: rgba(255, 255, 255, 0.96)
-      ha-tab-indicator-color: '#ff9f0a'
-      ha-tab-track-color: rgba(255, 255, 255, 0.14)
-      chat-background-color-user: rgba(255, 159, 10, 0.2)
-      chat-background-color-hass: rgba(255, 255, 255, 0.10)
-      scrollbar-thumb-color: rgba(255, 255, 255, 0.30)
-      label-badge-background-color: rgba(255, 255, 255, 0.16)
-      label-badge-text-color: rgba(255, 255, 255, 0.96)
+      ha-checkbox-border-color: '#AEAEB2'
+      slider-color: '#ff9500'
+      slider-secondary-color: rgba(120, 120, 128, 0.16)
+      slider-track-color: rgba(120, 120, 128, 0.20)
+      table-row-background-color: '#FFFFFF'
+      data-table-background-color: '#FFFFFF'
+      markdown-code-background-color: rgba(118, 118, 128, 0.12)
+      code-editor-background-color: rgba(118, 118, 128, 0.12)
+      markdown-link-color: '#ff9500'
+      ha-tooltip-background-color: '#FFFFFF'
+      ha-tooltip-text-color: '#000000'
+      ha-tab-indicator-color: '#ff9500'
+      ha-tab-track-color: rgba(60, 60, 67, 0.29)
+      chat-background-color-user: rgba(255, 149, 0, 0.16)
+      chat-background-color-hass: rgba(118, 118, 128, 0.12)
+      scrollbar-thumb-color: rgba(60, 60, 67, 0.30)
+      label-badge-background-color: '#FFFFFF'
+      label-badge-text-color: '#000000'
       md-list-container-color: none
+      primary-color: '#ff9500'
+      accent-color: '#ff9500'
+      rgb-primary-color: 255, 149, 0
+      app-theme-color: '#F2F1EE'
+      ha-color-focus: '#ff9500'
+      wa-focus-ring-color: '#ff9500'
+      ha-color-primary-05: '#1f160b'
+      ha-color-primary-10: '#3f2809'
+      ha-color-primary-20: '#7f4c06'
+      ha-color-primary-30: '#bf7103'
+      ha-color-primary-40: '#ff9500'
+      ha-color-primary-50: '#fea62b'
+      ha-color-primary-60: '#feb856'
+      ha-color-primary-70: '#fdc982'
+      ha-color-primary-80: '#fcdbad'
+      ha-color-primary-90: '#fcecd8'
+      ha-color-primary-95: '#fbf5ee'
+      red-color: '#FF3B30'
+      orange-color: '#FF9500'
+      yellow-color: '#FFCC00'
+      green-color: '#34C759'
+      teal-color: '#30B0C7'
+      cyan-color: '#32ADE6'
+      blue-color: '#007AFF'
+      indigo-color: '#5856D6'
+      purple-color: '#AF52DE'
+      pink-color: '#FF2D55'
+      brown-color: '#A2845E'
+      light-blue-color: '#32ADE6'
+      error-color: '#FF3B30'
+      rgb-error-color: 255, 59, 48
+      warning-color: '#FF9500'
+      rgb-warning-color: 255, 149, 0
+      success-color: '#34C759'
+      rgb-success-color: 52, 199, 89
+      info-color: '#007AFF'
+      rgb-info-color: 0, 122, 255
     dark:
-      background-image: 'center / cover no-repeat fixed url(''/local/visionos-themes/night.jpg''), linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)'
+      primary-background-color: '#0D0C0B'
+      secondary-background-color: '#1C1B19'
+      card-background-color: '#1C1B19'
+      material-background-color: '#1C1B19'
+      sidebar-background-color: '#1C1B19'
+      table-row-alternative-background-color: '#232220'
+      mdc-theme-surface: '#1C1B19'
       lovelace-background: 'center / cover no-repeat fixed url(''/local/visionos-themes/night.jpg''), linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)'
-      primary-background-color: 'linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)'
-      secondary-background-color: rgba(255, 255, 255, 0.10)
-      clear-background-color: rgba(58, 54, 50, 0.42)
+      background-image: 'center / cover no-repeat fixed url(''/local/visionos-themes/night.jpg''), linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)'
+      ha-card-background: rgba(37, 37, 37, 0.45)
+      clear-background-color: rgba(37, 37, 37, 0.45)
       app-header-background-color: transparent
-      ha-color-text-primary: rgba(255, 255, 255, 0.96)
-      ha-color-text-secondary: rgba(255, 255, 255, 0.66)
-      ha-color-text-disabled: rgba(255, 255, 255, 0.36)
-      ha-color-text-link: '#f6ad3b'
-      primary-text-color: rgba(255, 255, 255, 0.96)
-      secondary-text-color: rgba(255, 255, 255, 0.66)
-      disabled-text-color: rgba(255, 255, 255, 0.36)
-      text-primary-color: rgba(255, 255, 255, 0.96)
-      text-dark-color: rgba(255, 255, 255, 0.96)
+      ha-dialog-surface-background: rgba(37, 37, 37, 0.80)
+      ha-bottom-sheet-surface-background: rgba(37, 37, 37, 0.80)
+      ha-bottom-sheet-handle-color: rgba(235, 235, 245, 0.30)
+      ha-card-box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.34)
+      dialog-box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.34)
+      ha-color-text-primary: '#FFFFFF'
+      ha-color-text-secondary: rgba(235, 235, 245, 0.60)
+      ha-color-text-disabled: rgba(235, 235, 245, 0.30)
+      ha-color-text-link: '#ff9f0a'
+      primary-text-color: '#FFFFFF'
+      secondary-text-color: rgba(235, 235, 245, 0.60)
+      disabled-text-color: rgba(235, 235, 245, 0.30)
+      text-primary-color: '#FFFFFF'
+      text-dark-color: '#FFFFFF'
       rgb-primary-text-color: 255, 255, 255
-      lumo-body-text-color: rgba(255, 255, 255, 0.96)
-      ha-color-surface-default: rgba(58, 54, 50, 0.42)
-      ha-color-surface-low: rgba(255, 255, 255, 0.10)
-      ha-color-surface-lower: rgba(255, 255, 255, 0.16)
-      ha-color-on-surface-default: rgba(255, 255, 255, 0.96)
-      ha-color-form-background: rgba(255, 255, 255, 0.10)
-      ha-color-form-hover: rgba(255, 255, 255, 0.16)
-      ha-color-form-disabled: rgba(255, 255, 255, 0.14)
-      ha-card-background: rgba(58, 54, 50, 0.42)
-      ha-card-border-color: rgba(255, 255, 255, 0.22)
-      ha-card-box-shadow: 0 1px 2px rgba(0,0,0,0.20), 0 10px 30px rgba(0,0,0,0.28)
-      card-background-color: rgba(58, 54, 50, 0.42)
-      ha-dialog-surface-background: rgba(255, 255, 255, 0.16)
-      ha-bottom-sheet-surface-background: rgba(255, 255, 255, 0.16)
-      ha-bottom-sheet-handle-color: rgba(255, 255, 255, 0.36)
-      material-background-color: rgba(255, 255, 255, 0.16)
-      divider-color: rgba(255, 255, 255, 0.14)
-      outline-color: rgba(255, 255, 255, 0.14)
-      outline-hover-color: rgba(255, 255, 255, 0.22)
-      ha-color-border-neutral-quiet: rgba(255, 255, 255, 0.14)
-      ha-color-border-neutral-normal: rgba(255, 255, 255, 0.22)
-      ha-color-border-neutral-loud: rgba(255, 255, 255, 0.66)
+      lumo-body-text-color: '#FFFFFF'
+      ha-color-surface-default: '#1C1B19'
+      ha-color-surface-low: '#0D0C0B'
+      ha-color-surface-lower: '#000000'
+      ha-color-on-surface-default: '#FFFFFF'
+      ha-color-form-background: rgba(118, 118, 128, 0.24)
+      ha-color-form-hover: rgba(120, 120, 128, 0.32)
+      ha-color-form-disabled: rgba(118, 118, 128, 0.24)
+      divider-color: rgba(84, 84, 88, 0.60)
+      outline-color: rgba(84, 84, 88, 0.60)
+      outline-hover-color: rgba(235, 235, 245, 0.30)
+      ha-color-border-neutral-quiet: rgba(84, 84, 88, 0.60)
+      ha-color-border-neutral-normal: rgba(84, 84, 88, 0.60)
+      ha-color-border-neutral-loud: rgba(235, 235, 245, 0.60)
       ha-color-border-primary-quiet: rgba(255, 159, 10, 0.25)
       ha-color-border-primary-normal: '#ff9f0a'
-      ha-color-fill-neutral-quiet-resting: rgba(255, 255, 255, 0.14)
-      ha-color-fill-neutral-quiet-hover: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-quiet-active: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-normal-resting: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-normal-hover: rgba(255, 255, 255, 0.22)
-      ha-color-fill-neutral-loud-resting: rgba(255, 255, 255, 0.66)
-      ha-color-fill-primary-quiet-resting: rgba(255, 159, 10, 0.16)
-      ha-color-fill-primary-quiet-hover: rgba(255, 159, 10, 0.24)
-      ha-color-fill-primary-quiet-active: rgba(255, 159, 10, 0.3)
+      ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.24)
+      ha-color-fill-neutral-quiet-hover: rgba(120, 120, 128, 0.32)
+      ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.36)
+      ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.32)
+      ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.36)
+      ha-color-fill-neutral-loud-resting: rgba(235, 235, 245, 0.60)
+      ha-color-fill-primary-quiet-resting: rgba(255, 159, 10, 0.14)
+      ha-color-fill-primary-quiet-hover: rgba(255, 159, 10, 0.22)
+      ha-color-fill-primary-quiet-active: rgba(255, 159, 10, 0.28)
       ha-color-fill-primary-normal-resting: '#ff9f0a'
-      ha-color-fill-primary-normal-hover: '#f6ad3b'
-      ha-color-fill-primary-normal-active: '#c07809'
+      ha-color-fill-primary-normal-hover: '#feaf34'
+      ha-color-fill-primary-normal-active: '#febe5d'
       ha-color-fill-primary-loud-resting: '#ff9f0a'
-      ha-color-fill-primary-loud-hover: '#f6ad3b'
-      ha-color-fill-primary-loud-active: '#c07809'
-      ha-color-fill-disabled-quiet-resting: rgba(255, 255, 255, 0.14)
-      ha-color-fill-disabled-normal-resting: rgba(255, 255, 255, 0.14)
-      ha-color-on-neutral-quiet: rgba(255, 255, 255, 0.96)
-      ha-color-on-neutral-normal: rgba(255, 255, 255, 0.96)
-      ha-color-on-neutral-loud: '#ffffff'
-      ha-color-on-primary-quiet: '#f6ad3b'
+      ha-color-fill-primary-loud-hover: '#feaf34'
+      ha-color-fill-primary-loud-active: '#febe5d'
+      ha-color-fill-disabled-quiet-resting: rgba(118, 118, 128, 0.24)
+      ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.24)
+      ha-color-on-neutral-quiet: '#FFFFFF'
+      ha-color-on-neutral-normal: '#FFFFFF'
+      ha-color-on-neutral-loud: '#0D0C0B'
+      ha-color-on-primary-quiet: '#ff9f0a'
       ha-color-on-primary-normal: '#ffffff'
       ha-color-on-primary-loud: '#ffffff'
-      ha-color-on-disabled-quiet: rgba(255, 255, 255, 0.36)
-      ha-color-on-disabled-normal: rgba(255, 255, 255, 0.36)
+      ha-color-on-disabled-quiet: rgba(235, 235, 245, 0.30)
+      ha-color-on-disabled-normal: rgba(235, 235, 245, 0.30)
       wa-color-brand-fill-loud: '#ff9f0a'
-      wa-color-brand-fill-normal: rgba(255, 159, 10, 0.24)
-      wa-color-brand-fill-quiet: rgba(255, 159, 10, 0.14)
+      wa-color-brand-fill-normal: rgba(255, 159, 10, 0.16)
+      wa-color-brand-fill-quiet: rgba(255, 159, 10, 0.1)
       wa-color-brand-border-loud: '#ff9f0a'
-      wa-color-brand-border-normal: rgba(255, 159, 10, 0.55)
-      wa-color-brand-border-quiet: rgba(255, 159, 10, 0.28)
+      wa-color-brand-border-normal: rgba(255, 159, 10, 0.45)
+      wa-color-brand-border-quiet: rgba(255, 159, 10, 0.22)
       wa-color-brand-on-loud: '#ffffff'
-      wa-color-brand-on-normal: '#f6ad3b'
-      wa-color-brand-on-quiet: '#f6ad3b'
-      wa-color-neutral-fill-loud: rgba(255, 255, 255, 0.66)
-      wa-color-neutral-fill-normal: rgba(255, 255, 255, 0.22)
-      wa-color-neutral-fill-quiet: rgba(255, 255, 255, 0.14)
-      wa-color-neutral-border-loud: rgba(255, 255, 255, 0.66)
-      wa-color-neutral-border-normal: rgba(255, 255, 255, 0.22)
-      wa-color-neutral-border-quiet: rgba(255, 255, 255, 0.14)
-      wa-color-neutral-on-loud: '#ffffff'
-      wa-color-neutral-on-normal: rgba(255, 255, 255, 0.96)
-      wa-color-neutral-on-quiet: rgba(255, 255, 255, 0.96)
-      wa-color-text-normal: rgba(255, 255, 255, 0.96)
-      wa-color-text-quiet: rgba(255, 255, 255, 0.66)
-      wa-color-surface-default: rgba(58, 54, 50, 0.42)
-      wa-color-surface-raised: rgba(255, 255, 255, 0.16)
-      wa-color-surface-border: rgba(255, 255, 255, 0.22)
-      wa-form-control-background-color: rgba(255, 255, 255, 0.14)
-      wa-form-control-border-color: rgba(255, 255, 255, 0.22)
-      wa-form-control-value-color: rgba(255, 255, 255, 0.96)
-      wa-form-control-placeholder-color: rgba(255, 255, 255, 0.36)
-      sidebar-background-color: rgba(255, 255, 255, 0.10)
-      sidebar-text-color: rgba(255, 255, 255, 0.66)
-      sidebar-icon-color: rgba(255, 255, 255, 0.66)
+      wa-color-brand-on-normal: '#ff9f0a'
+      wa-color-brand-on-quiet: '#ff9f0a'
+      wa-color-neutral-fill-loud: rgba(235, 235, 245, 0.60)
+      wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.32)
+      wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.24)
+      wa-color-neutral-border-loud: rgba(235, 235, 245, 0.60)
+      wa-color-neutral-border-normal: rgba(84, 84, 88, 0.60)
+      wa-color-neutral-border-quiet: rgba(84, 84, 88, 0.60)
+      wa-color-neutral-on-loud: '#0D0C0B'
+      wa-color-neutral-on-normal: '#FFFFFF'
+      wa-color-neutral-on-quiet: '#FFFFFF'
+      wa-color-text-normal: '#FFFFFF'
+      wa-color-text-quiet: rgba(235, 235, 245, 0.60)
+      wa-color-surface-default: '#1C1B19'
+      wa-color-surface-raised: '#2C2A27'
+      wa-color-surface-border: rgba(84, 84, 88, 0.60)
+      wa-form-control-background-color: rgba(118, 118, 128, 0.24)
+      wa-form-control-border-color: rgba(84, 84, 88, 0.60)
+      wa-form-control-value-color: '#FFFFFF'
+      wa-form-control-placeholder-color: rgba(235, 235, 245, 0.30)
+      sidebar-text-color: rgba(235, 235, 245, 0.60)
+      sidebar-icon-color: rgba(235, 235, 245, 0.60)
       sidebar-selected-icon-color: '#ff9f0a'
       sidebar-menu-button-background-color: transparent
-      sidebar-menu-button-text-color: rgba(255, 255, 255, 0.96)
-      state-icon-color: rgba(255, 255, 255, 0.66)
+      sidebar-menu-button-text-color: '#FFFFFF'
+      state-icon-color: '#8E8E93'
       state-icon-active-color: '#ff9f0a'
-      state-icon-unavailable-color: rgba(255, 255, 255, 0.36)
-      state-inactive-color: rgba(255, 255, 255, 0.36)
-      ha-tile-info-primary-color: rgba(255, 255, 255, 0.96)
-      ha-tile-info-secondary-color: rgba(255, 255, 255, 0.66)
-      tile-icon-color: rgba(255, 255, 255, 0.66)
-      ha-heading-card-title-color: rgba(255, 255, 255, 0.96)
-      ha-heading-card-subtitle-color: rgba(255, 255, 255, 0.66)
-      input-ink-color: rgba(255, 255, 255, 0.96)
-      input-fill-color: transparent
-      input-disabled-fill-color: transparent
-      input-label-ink-color: rgba(255, 255, 255, 0.66)
-      input-disabled-ink-color: rgba(255, 255, 255, 0.36)
-      input-dropdown-icon-color: rgba(255, 255, 255, 0.66)
-      input-idle-line-color: rgba(255, 255, 255, 0.14)
-      input-hover-line-color: rgba(255, 255, 255, 0.22)
+      state-icon-unavailable-color: rgba(235, 235, 245, 0.30)
+      state-inactive-color: rgba(235, 235, 245, 0.30)
+      ha-tile-info-primary-color: '#FFFFFF'
+      ha-tile-info-secondary-color: rgba(235, 235, 245, 0.60)
+      tile-icon-color: '#8E8E93'
+      ha-heading-card-title-color: '#FFFFFF'
+      ha-heading-card-subtitle-color: rgba(235, 235, 245, 0.60)
+      input-ink-color: '#FFFFFF'
+      input-fill-color: rgba(118, 118, 128, 0.24)
+      input-disabled-fill-color: rgba(118, 118, 128, 0.24)
+      input-label-ink-color: rgba(235, 235, 245, 0.60)
+      input-disabled-ink-color: rgba(235, 235, 245, 0.30)
+      input-dropdown-icon-color: rgba(235, 235, 245, 0.60)
+      input-idle-line-color: rgba(84, 84, 88, 0.60)
+      input-hover-line-color: rgba(235, 235, 245, 0.30)
       switch-checked-track-color: '#ff9f0a'
       switch-checked-button-color: '#ffffff'
-      switch-unchecked-track-color: rgba(255, 255, 255, 0.22)
+      switch-unchecked-track-color: '#636366'
       switch-unchecked-button-color: '#ffffff'
       ha-switch-checked-background-color: '#ff9f0a'
+      ha-switch-checked-thumb-color: '#ffffff'
       ha-checkbox-checked-background-color: '#ff9f0a'
       ha-checkbox-checked-icon-color: '#ffffff'
-      ha-checkbox-border-color: rgba(255, 255, 255, 0.22)
+      ha-checkbox-border-color: '#636366'
       slider-color: '#ff9f0a'
-      slider-secondary-color: rgba(255, 255, 255, 0.16)
-      slider-track-color: rgba(255, 255, 255, 0.22)
-      table-row-background-color: transparent
-      table-row-alternative-background-color: rgba(255, 255, 255, 0.10)
-      data-table-background-color: transparent
-      markdown-code-background-color: rgba(255, 255, 255, 0.10)
-      code-editor-background-color: rgba(255, 255, 255, 0.10)
-      markdown-link-color: '#f6ad3b'
-      ha-tooltip-background-color: rgba(255, 255, 255, 0.16)
-      ha-tooltip-text-color: rgba(255, 255, 255, 0.96)
+      slider-secondary-color: rgba(120, 120, 128, 0.32)
+      slider-track-color: rgba(120, 120, 128, 0.36)
+      table-row-background-color: '#1C1B19'
+      data-table-background-color: '#1C1B19'
+      markdown-code-background-color: rgba(118, 118, 128, 0.24)
+      code-editor-background-color: rgba(118, 118, 128, 0.24)
+      markdown-link-color: '#ff9f0a'
+      ha-tooltip-background-color: '#2C2A27'
+      ha-tooltip-text-color: '#FFFFFF'
       ha-tab-indicator-color: '#ff9f0a'
-      ha-tab-track-color: rgba(255, 255, 255, 0.14)
-      chat-background-color-user: rgba(255, 159, 10, 0.2)
-      chat-background-color-hass: rgba(255, 255, 255, 0.10)
-      scrollbar-thumb-color: rgba(255, 255, 255, 0.22)
-      label-badge-background-color: rgba(255, 255, 255, 0.16)
-      label-badge-text-color: rgba(255, 255, 255, 0.96)
+      ha-tab-track-color: rgba(84, 84, 88, 0.60)
+      chat-background-color-user: rgba(255, 159, 10, 0.16)
+      chat-background-color-hass: rgba(118, 118, 128, 0.24)
+      scrollbar-thumb-color: rgba(235, 235, 245, 0.30)
+      label-badge-background-color: '#2C2A27'
+      label-badge-text-color: '#FFFFFF'
       md-list-container-color: none
+      primary-color: '#ff9f0a'
+      accent-color: '#ff9f0a'
+      rgb-primary-color: 255, 159, 10
+      app-theme-color: '#0D0C0B'
+      ha-color-focus: '#ff9f0a'
+      wa-focus-ring-color: '#ff9f0a'
+      ha-color-primary-05: '#1f170c'
+      ha-color-primary-10: '#3f2a0c'
+      ha-color-primary-20: '#7f510b'
+      ha-color-primary-30: '#bf780b'
+      ha-color-primary-40: '#ff9f0a'
+      ha-color-primary-50: '#feaf34'
+      ha-color-primary-60: '#febe5d'
+      ha-color-primary-70: '#fdce87'
+      ha-color-primary-80: '#fcdeb0'
+      ha-color-primary-90: '#fceeda'
+      ha-color-primary-95: '#fbf5ee'
+      red-color: '#FF453A'
+      orange-color: '#FF9F0A'
+      yellow-color: '#FFD60A'
+      green-color: '#30D158'
+      teal-color: '#40C8E0'
+      cyan-color: '#64D2FF'
+      blue-color: '#0A84FF'
+      indigo-color: '#5E5CE6'
+      purple-color: '#BF5AF2'
+      pink-color: '#FF375F'
+      brown-color: '#AC8E68'
+      light-blue-color: '#64D2FF'
+      error-color: '#FF453A'
+      rgb-error-color: 255, 69, 58
+      warning-color: '#FF9F0A'
+      rgb-warning-color: 255, 159, 10
+      success-color: '#30D158'
+      rgb-success-color: 48, 209, 88
+      info-color: '#0A84FF'
+      rgb-info-color: 10, 132, 255
 
 # ---- source: apporo.yaml ----
 apporo:
