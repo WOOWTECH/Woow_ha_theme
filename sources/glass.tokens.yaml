@@ -1,65 +1,135 @@
 # Source of truth for the glass theme family (VisionOS 26 / Liquid Glass 26).
 # Only DESIGN DECISIONS live here. scripts/build_glass_themes.py expands these
-# into the full four-layer HA 2026 token set (ha-color-* / wa-* / legacy / ha-card-*).
+# into the full four-layer HA 2026 token set.
 #
 # Never hand-edit the generated themes/*.yaml for these two themes.
+#
+# ---------------------------------------------------------------------------
+# LAYER DISCIPLINE - read this before changing anything
+# ---------------------------------------------------------------------------
+# Apple's rule: glass lives in the NAVIGATION layer, never the content layer,
+# and never glass-on-glass. Home Assistant has variables for both layers and
+# they look interchangeable. They are not:
+#
+#   OPAQUE, always      primary-background-color, secondary-background-color,
+#                       card-background-color, material-background-color,
+#                       sidebar-background-color
+#                       -> consumed as `background-color:`, so a gradient or a
+#                          low-alpha rgba here makes whole PAGES see-through
+#                          (settings panels, the sidebar drawer, data tables).
+#                          `background-color: linear-gradient(...)` is invalid
+#                          CSS and is dropped silently -> transparent.
+#
+#   WALLPAPER           lovelace-background -> takes a full `background`
+#                       shorthand, dashboard views only. The image goes here
+#                       and NOWHERE else.
+#
+#   GLASS               ha-card-background (+ ha-badge), app header, dialog and
+#                       bottom-sheet surfaces. Alpha follows Apple's material
+#                       tiers below, never below ~0.45, or text stops being
+#                       legible over a busy wallpaper.
+# ---------------------------------------------------------------------------
+
+# Apple UIBlurEffect material tiers (community-measured approximations).
+# regular = systemMaterial, thick = systemThickMaterial, thin = systemThinMaterial.
+materials:
+  light:
+    thin:    "rgba(255, 255, 255, 0.60)"
+    regular: "rgba(246, 246, 246, 0.72)"
+    thick:   "rgba(246, 246, 246, 0.84)"
+  dark:
+    thin:    "rgba(37, 37, 37, 0.45)"
+    regular: "rgba(37, 37, 37, 0.65)"
+    thick:   "rgba(37, 37, 37, 0.80)"
+
+# apple.com's own nav uses backdrop-filter: saturate(180%) blur(20px).
+# Over-blurring (40-60px) is the number one tell of a fake glass theme.
+blur: "20px"
+saturate: "180%"
 
 variants:
   - key: "VisionOS 26"
-    brand: "#FF9F0A"          # Apple systemOrange (dark) — the visionOS accent
-    # Background: gradient is the FALLBACK layer, image is layered on top.
-    # HACS does not install www/, so the gradient must stand on its own.
-    background:
+    # Apple systemOrange, per mode. Using the dark hex in light mode is a tell.
+    brand: { light: "#FF9500", dark: "#FF9F0A" }
+    # visionOS glass is the substrate, so it sits one tier thinner than iOS.
+    material: thin
+    # Apple: Home-app tiles ~20pt, alerts 14pt; visionOS is rounder still.
+    radius: { card: 22, dialog: 14, sheet: 16, inner_padding: 12 }
+    wallpaper:
       light:
-        gradient: "linear-gradient(160deg, #8c8378 0%, #6f675e 45%, #4a453f 100%)"
         image: "/local/visionos-themes/day.jpg"
+        gradient: "linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)"
       dark:
-        gradient: "linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)"
         image: "/local/visionos-themes/night.jpg"
-    glass:
-      # tint = the card fill painted on top of the blurred backdrop
-      light:  { tint: "rgba(150, 145, 138, 0.30)", rim: "rgba(255, 255, 255, 0.30)" }
-      dark:   { tint: "rgba(58, 54, 50, 0.42)",    rim: "rgba(255, 255, 255, 0.22)" }
-      blur: "20px"
-      saturate: "160%"
-    radius: "2xl"             # 24px — visionOS uses large, even radii
-    neutral_hue: [138, 132, 124]   # warm grey (visionOS is warm)
+        gradient: "linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)"
+    # Opaque page/surface colours for everything that is NOT a dashboard.
+    # visionOS is warm, so these are Apple's greys nudged warm.
+    page:     { light: "#F2F1EE", dark: "#0D0C0B" }
+    surface:  { light: "#FFFFFF", dark: "#1C1B19" }
+    elevated: { light: "#FFFFFF", dark: "#2C2A27" }
 
   - key: "Liquid Glass 26"
-    brand: "#0A84FF"          # Apple systemBlue (dark) — iOS 26 accent
-    background:
+    brand: { light: "#007AFF", dark: "#0A84FF" }   # Apple systemBlue, per mode
+    material: regular
+    radius: { card: 20, dialog: 14, sheet: 16, inner_padding: 12 }
+    wallpaper:
       light:
-        gradient: "linear-gradient(155deg, #dfe6f2 0%, #c3cede 40%, #9fb0c6 100%)"
         image: "/local/visionos-themes/macOS_26_Light.webp"
+        gradient: "linear-gradient(155deg, #dfe6f2 0%, #c3cede 40%, #9fb0c6 100%)"
       dark:
-        gradient: "linear-gradient(155deg, #1c2028 0%, #12161d 50%, #07090d 100%)"
         image: "/local/visionos-themes/macOS_26_Dark.webp"
-    glass:
-      light:  { tint: "rgba(255, 255, 255, 0.42)", rim: "rgba(255, 255, 255, 0.55)" }
-      dark:   { tint: "rgba(46, 51, 62, 0.46)",    rim: "rgba(255, 255, 255, 0.20)" }
-      blur: "28px"
-      saturate: "180%"
-    radius: "3xl"             # 28px — iOS 26 is rounder still
-    neutral_hue: [134, 142, 156]   # cool grey
+        gradient: "linear-gradient(155deg, #1c2028 0%, #12161d 50%, #07090d 100%)"
+    # Straight Apple: systemGroupedBackground / secondary / dark-elevated.
+    page:     { light: "#F2F2F7", dark: "#000000" }
+    surface:  { light: "#FFFFFF", dark: "#1C1C1E" }
+    elevated: { light: "#FFFFFF", dark: "#2C2C2E" }
 
-# Apple system colours, shared by both variants (dark-mode values; the
-# light-mode set is generated by the builder).
+# Apple system colours, BOTH appearances (UIColor.system*.resolvedColor).
 status:
-  red:        "#FF453A"
-  orange:     "#FF9F0A"
-  yellow:     "#FFD60A"
-  green:      "#32D74B"
-  teal:       "#6AC4DC"
-  cyan:       "#5AC8F5"
-  blue:       "#0A84FF"
-  indigo:     "#5E5CE6"
-  purple:     "#BF5AF2"
-  pink:       "#FF375F"
-  brown:      "#AC8E68"
-  light-blue: "#66D4CF"
+  red:        { light: "#FF3B30", dark: "#FF453A" }
+  orange:     { light: "#FF9500", dark: "#FF9F0A" }
+  yellow:     { light: "#FFCC00", dark: "#FFD60A" }
+  green:      { light: "#34C759", dark: "#30D158" }
+  teal:       { light: "#30B0C7", dark: "#40C8E0" }
+  cyan:       { light: "#32ADE6", dark: "#64D2FF" }
+  blue:       { light: "#007AFF", dark: "#0A84FF" }
+  indigo:     { light: "#5856D6", dark: "#5E5CE6" }
+  purple:     { light: "#AF52DE", dark: "#BF5AF2" }
+  pink:       { light: "#FF2D55", dark: "#FF375F" }
+  brown:      { light: "#A2845E", dark: "#AC8E68" }
+  light-blue: { light: "#32ADE6", dark: "#64D2FF" }
 
-# Emit the optional card-mod block (specular highlight + card de-backing).
-# The theme is fully functional WITHOUT card-mod; this only adds the rim
-# highlight. card-mod issue #606 breaks YAML theme loading on HA >= 2026.8,
-# so this stays off by default.
+# Apple semantic ink. The bases are NOT pure black/white - light is #3C3C43
+# (60,60,67, faintly cool), dark is #EBEBF5 (235,235,245). Using rgba(0,0,0,.6)
+# and rgba(255,255,255,.6) instead is an instant tell.
+ink:
+  light:
+    primary:   "#000000"
+    secondary: "rgba(60, 60, 67, 0.60)"
+    tertiary:  "rgba(60, 60, 67, 0.30)"
+    separator: "rgba(60, 60, 67, 0.29)"
+    fill1:     "rgba(120, 120, 128, 0.20)"
+    fill2:     "rgba(120, 120, 128, 0.16)"
+    fill3:     "rgba(118, 118, 128, 0.12)"
+  dark:
+    primary:   "#FFFFFF"
+    secondary: "rgba(235, 235, 245, 0.60)"
+    tertiary:  "rgba(235, 235, 245, 0.30)"
+    separator: "rgba(84, 84, 88, 0.60)"
+    fill1:     "rgba(120, 120, 128, 0.36)"
+    fill2:     "rgba(120, 120, 128, 0.32)"
+    fill3:     "rgba(118, 118, 128, 0.24)"
+
+# Apple systemGray ramp, per appearance. Note it INVERTS direction between
+# modes - reusing the dark ramp in light mode turns hairlines near-black.
+grays:
+  light: ["#8E8E93", "#AEAEB2", "#C7C7CC", "#D1D1D6", "#E5E5EA", "#F2F2F7"]
+  dark:  ["#8E8E93", "#636366", "#48484A", "#3A3A3C", "#2C2C2E", "#1C1C1E"]
+
+# Resolves to SF UI on Apple platforms; falls back gracefully elsewhere.
+# SF Pro cannot legally be served as a webfont, so the fallback matters.
+font_stack: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+
+# Optional card-mod block. The native tokens now cover everything it did, and
+# card-mod issue #606 breaks YAML theme loading on HA >= 2026.8, so: off.
 card_mod: false
