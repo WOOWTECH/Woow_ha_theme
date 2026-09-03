@@ -145,6 +145,7 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
     # headline from body by WEIGHT at the same size, not by size.
     t["ha-font-family-body"] = cfg["font_stack"]
     t["ha-font-family-heading"] = cfg["font_stack"]
+    t["ha-font-size-scale"] = "0.85"
     t["ha-font-weight-heading"] = "700"
     t["ha-font-weight-action"] = "600"
     t["ha-line-height-normal"] = "1.29"      # 22/17, Apple body
@@ -175,8 +176,12 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
     t["wa-form-control-border-radius"] = "10px"
 
     # ---- compact layout: 85% of HA's section/card geometry ---------------
-    # Keep controls at the 44px HIG touch floor below; only card/grid geometry
-    # is compacted. 56px rows -> 48px, 500/320px columns -> 425/272px.
+    # Scale the spacing tokens used for card padding together with typography
+    # so text-to-edge proportions remain stable. Larger control-size tokens
+    # stay untouched to preserve the 44px HIG tap-target floor.
+    for step in range(1, 9):
+        t[f"ha-space-{step}"] = f"{step * 3.4:g}px"
+    # 56px rows -> 48px, 500/320px columns -> 425/272px.
     t["ha-card-feature-gap"] = "7px"
     t["ha-view-sections-column-gap"] = "14px"
     t["ha-view-sections-row-gap"] = "14px"
@@ -218,7 +223,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # wallpaper cannot erase state, text, or control affordances beneath it.
     nav_material = cfg["materials"][mode]["regular"]
     content_material = cfg["materials"][mode]["content"]
-    card_brightness = "140%" if mode == "light" else "55%"
+    card_brightness = "190%" if mode == "light" else "38%"
     card_filter = (f"blur({cfg['blur']}) saturate({cfg['saturate']}) "
                    f"brightness({card_brightness})")
     thick = cfg["materials"][mode]["thick"]
@@ -233,11 +238,11 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     ui_brand = prim[10] if light else prim[80]
     brand_hover = prim[5] if light else prim[90]
     brand_active = prim[5] if light else prim[95]
-    state_icon = "#48484A" if light else "#E5E5EA"
+    state_icon = "#2C2C2E" if light else "#E5E5EA"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
-    unavailable_icon = "#8C1111" if light else "#FFC7C2"
-    off_track = "#48484A" if light else "#E5E5EA"
+    unavailable_icon = "#650B0B" if light else "#FFC7C2"
+    off_track = "#2C2C2E" if light else "#E5E5EA"
     off_thumb = "#FFFFFF" if light else "#1C1C1E"
     control_fill = "#E5E5EA" if light else "#48484A"
     control_hover = "#D1D1D6" if light else "#636366"
