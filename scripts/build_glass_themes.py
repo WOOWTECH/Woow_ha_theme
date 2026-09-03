@@ -220,14 +220,14 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # Keep the Apple system colour in the exported palette, but use a darker
     # ramp stop for light-mode interactive UI where system orange/blue on a
     # near-white material does not meet the 3:1 graphical-contrast floor.
-    ui_brand = prim[20] if light else prim[80]
-    brand_hover = prim[10] if light else prim[90]
+    ui_brand = prim[10] if light else prim[80]
+    brand_hover = prim[5] if light else prim[90]
     brand_active = prim[5] if light else prim[95]
-    state_icon = "#48484A" if light else "#D1D1D6"
+    state_icon = "#48484A" if light else "#E5E5EA"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
-    unavailable_icon = "#A61B1B" if light else "#FFC7C2"
-    off_track = "#48484A" if light else "#D1D1D6"
+    unavailable_icon = "#8C1111" if light else "#FFC7C2"
+    off_track = "#48484A" if light else "#E5E5EA"
     off_thumb = "#FFFFFF" if light else "#1C1C1E"
     control_fill = "#E5E5EA" if light else "#48484A"
     control_hover = "#D1D1D6" if light else "#636366"
