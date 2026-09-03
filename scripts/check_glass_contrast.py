@@ -115,6 +115,51 @@ def main() -> int:
             toast_ratio = contrast(toast_text, toast)
             if toast_ratio < TEXT_MIN:
                 failures.append(f"{name}/{mode}: toast text is {toast_ratio:.2f}:1")
+
+            # ha-sidebar's update/notification badge uses accent-color plus
+            # text-accent-color (falling back to text-primary-color). Missing
+            # the dedicated foreground produced white numbers on pale orange.
+            badge_fg_key = "text-accent-color"
+            if badge_fg_key not in tokens:
+                failures.append(f"{name}/{mode}: missing {badge_fg_key} for sidebar badges")
+            else:
+                badge = composite(tokens["accent-color"], (0, 0, 0))
+                badge_text = composite(tokens[badge_fg_key], badge)
+                badge_ratio = contrast(badge_text, badge)
+                if badge_ratio < TEXT_MIN:
+                    failures.append(f"{name}/{mode}: sidebar badge text is {badge_ratio:.2f}:1")
+
+            # Common foreground/surface pairs that share the same failure mode.
+            required_pairs = (
+                ("ha-color-fill-primary-loud-resting", "ha-color-on-primary-loud", TEXT_MIN, "primary loud"),
+                ("label-badge-background-color", "label-badge-text-color", TEXT_MIN, "label badge"),
+                ("ha-tooltip-background-color", "ha-tooltip-text-color", TEXT_MIN, "tooltip"),
+                ("switch-checked-track-color", "switch-checked-button-color", GRAPHIC_MIN, "checked switch"),
+                ("sidebar-background-color", "sidebar-text-color", TEXT_MIN, "sidebar text"),
+                ("input-fill-color", "input-ink-color", TEXT_MIN, "input value"),
+                ("wa-color-surface-default", "wa-color-text-normal", TEXT_MIN, "Web Awesome surface text"),
+                ("mdc-theme-primary", "mdc-theme-on-primary", TEXT_MIN, "MDC primary"),
+                ("mdc-theme-secondary", "mdc-theme-on-secondary", TEXT_MIN, "MDC secondary"),
+            )
+            for background_key, foreground_key, minimum, pair_label in required_pairs:
+                missing = [key for key in (background_key, foreground_key) if key not in tokens]
+                if missing:
+                    failures.append(f"{name}/{mode}: missing {', '.join(missing)} for {pair_label}")
+                    continue
+                background = composite(tokens[background_key], (0, 0, 0))
+                foreground = composite(tokens[foreground_key], background)
+                pair_ratio = contrast(foreground, background)
+                if pair_ratio < minimum:
+                    failures.append(f"{name}/{mode}: {pair_label} is {pair_ratio:.2f}:1")
+
+            # Selected sidebar rows paint accent at roughly divider opacity,
+            # then reuse accent as foreground. Verify that self-tint pairing.
+            sidebar = composite(tokens["sidebar-background-color"], (0, 0, 0))
+            selected_color = parse_color(tokens["sidebar-selected-icon-color"])[0]
+            selected_surface = tuple(0.12 * fg + 0.88 * bg for fg, bg in zip(selected_color, sidebar))
+            selected_ratio = contrast(selected_color, selected_surface)
+            if selected_ratio < TEXT_MIN:
+                failures.append(f"{name}/{mode}: selected sidebar text is {selected_ratio:.2f}:1")
     if failures:
         print("glass contrast check FAILED:")
         print("\n".join(f"- {failure}" for failure in failures))

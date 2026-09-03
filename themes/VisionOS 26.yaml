@@ -83,13 +83,17 @@ VisionOS 26:
       ha-color-text-primary: '#FFFFFF'
       ha-color-text-secondary: '#FFFFFF'
       ha-color-text-disabled: '#D1D1D6'
-      ha-color-text-link: '#fcecd8'
+      ha-color-text-link: '#fbf5ee'
       primary-text-color: '#FFFFFF'
       secondary-text-color: '#FFFFFF'
       disabled-text-color: '#D1D1D6'
       text-primary-color: '#FFFFFF'
-      text-dark-color: '#FFFFFF'
+      text-accent-color: '#1C1C1E'
+      text-dark-color: '#1C1C1E'
+      text-light-primary-color: '#1C1C1E'
       rgb-primary-text-color: 255, 255, 255
+      rgb-text-primary-color: 255, 255, 255
+      rgb-accent-color: 251, 245, 238
       lumo-body-text-color: '#FFFFFF'
       ha-color-surface-default: '#5A5650'
       ha-color-surface-low: '#4A4743'
@@ -104,42 +108,42 @@ VisionOS 26:
       ha-color-border-neutral-quiet: '#636366'
       ha-color-border-neutral-normal: '#636366'
       ha-color-border-neutral-loud: '#FFFFFF'
-      ha-color-border-primary-quiet: rgba(252, 236, 216, 0.25)
-      ha-color-border-primary-normal: '#fcecd8'
+      ha-color-border-primary-quiet: rgba(251, 245, 238, 0.25)
+      ha-color-border-primary-normal: '#fbf5ee'
       ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.24)
       ha-color-fill-neutral-quiet-hover: rgba(120, 120, 128, 0.32)
       ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.36)
       ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.32)
       ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.36)
       ha-color-fill-neutral-loud-resting: '#3A3A3C'
-      ha-color-fill-primary-quiet-resting: rgba(252, 236, 216, 0.14)
-      ha-color-fill-primary-quiet-hover: rgba(252, 236, 216, 0.22)
-      ha-color-fill-primary-quiet-active: rgba(252, 236, 216, 0.28)
-      ha-color-fill-primary-normal-resting: '#fcecd8'
-      ha-color-fill-primary-normal-hover: '#fbf5ee'
-      ha-color-fill-primary-normal-active: '#fbf5ee'
-      ha-color-fill-primary-loud-resting: '#fcecd8'
-      ha-color-fill-primary-loud-hover: '#fbf5ee'
-      ha-color-fill-primary-loud-active: '#fbf5ee'
+      ha-color-fill-primary-quiet-resting: rgba(251, 245, 238, 0.14)
+      ha-color-fill-primary-quiet-hover: rgba(251, 245, 238, 0.22)
+      ha-color-fill-primary-quiet-active: rgba(251, 245, 238, 0.28)
+      ha-color-fill-primary-normal-resting: '#fbf5ee'
+      ha-color-fill-primary-normal-hover: '#fcecd8'
+      ha-color-fill-primary-normal-active: '#fcdbad'
+      ha-color-fill-primary-loud-resting: '#fbf5ee'
+      ha-color-fill-primary-loud-hover: '#fcecd8'
+      ha-color-fill-primary-loud-active: '#fcdbad'
       ha-color-fill-disabled-quiet-resting: rgba(118, 118, 128, 0.24)
       ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.24)
       ha-color-on-neutral-quiet: '#FFFFFF'
       ha-color-on-neutral-normal: '#FFFFFF'
       ha-color-on-neutral-loud: '#FFFFFF'
-      ha-color-on-primary-quiet: '#fcecd8'
+      ha-color-on-primary-quiet: '#fbf5ee'
       ha-color-on-primary-normal: '#1C1C1E'
       ha-color-on-primary-loud: '#1C1C1E'
       ha-color-on-disabled-quiet: '#D1D1D6'
       ha-color-on-disabled-normal: '#D1D1D6'
-      wa-color-brand-fill-loud: '#fcecd8'
-      wa-color-brand-fill-normal: rgba(252, 236, 216, 0.16)
-      wa-color-brand-fill-quiet: rgba(252, 236, 216, 0.1)
-      wa-color-brand-border-loud: '#fcecd8'
-      wa-color-brand-border-normal: rgba(252, 236, 216, 0.45)
-      wa-color-brand-border-quiet: rgba(252, 236, 216, 0.22)
+      wa-color-brand-fill-loud: '#fbf5ee'
+      wa-color-brand-fill-normal: rgba(251, 245, 238, 0.16)
+      wa-color-brand-fill-quiet: rgba(251, 245, 238, 0.1)
+      wa-color-brand-border-loud: '#fbf5ee'
+      wa-color-brand-border-normal: rgba(251, 245, 238, 0.45)
+      wa-color-brand-border-quiet: rgba(251, 245, 238, 0.22)
       wa-color-brand-on-loud: '#1C1C1E'
-      wa-color-brand-on-normal: '#fcecd8'
-      wa-color-brand-on-quiet: '#fcecd8'
+      wa-color-brand-on-normal: '#fbf5ee'
+      wa-color-brand-on-quiet: '#fbf5ee'
       wa-color-neutral-fill-loud: '#3A3A3C'
       wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.32)
       wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.24)
@@ -158,13 +162,19 @@ VisionOS 26:
       wa-form-control-border-color: '#636366'
       wa-form-control-value-color: '#FFFFFF'
       wa-form-control-placeholder-color: '#D1D1D6'
+      mdc-theme-primary: '#fbf5ee'
+      mdc-theme-secondary: '#fbf5ee'
+      mdc-theme-on-primary: '#1C1C1E'
+      mdc-theme-on-secondary: '#1C1C1E'
+      mdc-theme-on-surface: '#FFFFFF'
+      mdc-theme-background: '#4A4743'
       sidebar-text-color: '#FFFFFF'
       sidebar-icon-color: '#FFFFFF'
-      sidebar-selected-icon-color: '#fcecd8'
+      sidebar-selected-icon-color: '#fbf5ee'
       sidebar-menu-button-background-color: transparent
       sidebar-menu-button-text-color: '#FFFFFF'
       state-icon-color: '#E5E5EA'
-      state-icon-active-color: '#fcecd8'
+      state-icon-active-color: '#fbf5ee'
       state-icon-unavailable-color: '#FFC7C2'
       state-unavailable-color: '#FFC7C2'
       state-inactive-color: '#E5E5EA'
@@ -187,39 +197,39 @@ VisionOS 26:
       input-dropdown-icon-color: '#FFFFFF'
       input-idle-line-color: '#636366'
       input-hover-line-color: '#D1D1D6'
-      switch-checked-track-color: '#fcecd8'
+      switch-checked-track-color: '#fbf5ee'
       switch-checked-button-color: '#1C1C1E'
       switch-unchecked-track-color: '#E5E5EA'
       switch-unchecked-button-color: '#1C1C1E'
-      ha-switch-checked-background-color: '#fcecd8'
+      ha-switch-checked-background-color: '#fbf5ee'
       ha-switch-checked-thumb-color: '#1C1C1E'
-      ha-checkbox-checked-background-color: '#fcecd8'
+      ha-checkbox-checked-background-color: '#fbf5ee'
       ha-checkbox-checked-icon-color: '#1C1C1E'
       ha-checkbox-border-color: '#E5E5EA'
-      slider-color: '#fcecd8'
+      slider-color: '#fbf5ee'
       slider-secondary-color: rgba(120, 120, 128, 0.32)
       slider-track-color: rgba(120, 120, 128, 0.36)
       table-row-background-color: '#5A5650'
       data-table-background-color: '#5A5650'
       markdown-code-background-color: rgba(118, 118, 128, 0.24)
       code-editor-background-color: rgba(118, 118, 128, 0.24)
-      markdown-link-color: '#fcecd8'
+      markdown-link-color: '#fbf5ee'
       ha-tooltip-background-color: '#6A655E'
       ha-tooltip-text-color: '#FFFFFF'
-      ha-tab-indicator-color: '#fcecd8'
+      ha-tab-indicator-color: '#fbf5ee'
       ha-tab-track-color: '#636366'
-      chat-background-color-user: rgba(252, 236, 216, 0.16)
+      chat-background-color-user: rgba(251, 245, 238, 0.16)
       chat-background-color-hass: rgba(118, 118, 128, 0.24)
       scrollbar-thumb-color: '#D1D1D6'
       label-badge-background-color: '#6A655E'
       label-badge-text-color: '#FFFFFF'
       md-list-container-color: none
-      primary-color: '#fcecd8'
-      accent-color: '#fcecd8'
-      rgb-primary-color: 252, 236, 216
+      primary-color: '#fbf5ee'
+      accent-color: '#fbf5ee'
+      rgb-primary-color: 251, 245, 238
       app-theme-color: '#4A4743'
-      ha-color-focus: '#fcecd8'
-      wa-focus-ring-color: '#fcecd8'
+      ha-color-focus: '#fbf5ee'
+      wa-focus-ring-color: '#fbf5ee'
       ha-color-primary-05: '#1f160b'
       ha-color-primary-10: '#3f2809'
       ha-color-primary-20: '#7f4c06'
@@ -278,8 +288,12 @@ VisionOS 26:
       secondary-text-color: '#FFFFFF'
       disabled-text-color: '#D1D1D6'
       text-primary-color: '#FFFFFF'
-      text-dark-color: '#FFFFFF'
+      text-accent-color: '#1C1C1E'
+      text-dark-color: '#1C1C1E'
+      text-light-primary-color: '#1C1C1E'
       rgb-primary-text-color: 255, 255, 255
+      rgb-text-primary-color: 255, 255, 255
+      rgb-accent-color: 252, 222, 176
       lumo-body-text-color: '#FFFFFF'
       ha-color-surface-default: '#1C1B19'
       ha-color-surface-low: '#0D0C0B'
@@ -348,6 +362,12 @@ VisionOS 26:
       wa-form-control-border-color: '#636366'
       wa-form-control-value-color: '#FFFFFF'
       wa-form-control-placeholder-color: '#D1D1D6'
+      mdc-theme-primary: '#fcdeb0'
+      mdc-theme-secondary: '#fcdeb0'
+      mdc-theme-on-primary: '#1C1C1E'
+      mdc-theme-on-secondary: '#1C1C1E'
+      mdc-theme-on-surface: '#FFFFFF'
+      mdc-theme-background: '#0D0C0B'
       sidebar-text-color: '#FFFFFF'
       sidebar-icon-color: '#FFFFFF'
       sidebar-selected-icon-color: '#fcdeb0'

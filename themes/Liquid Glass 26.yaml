@@ -83,13 +83,17 @@ Liquid Glass 26:
       ha-color-text-primary: '#FFFFFF'
       ha-color-text-secondary: '#FFFFFF'
       ha-color-text-disabled: '#D1D1D6'
-      ha-color-text-link: '#d6e8fd'
+      ha-color-text-link: '#ecf3fd'
       primary-text-color: '#FFFFFF'
       secondary-text-color: '#FFFFFF'
       disabled-text-color: '#D1D1D6'
       text-primary-color: '#FFFFFF'
-      text-dark-color: '#FFFFFF'
+      text-accent-color: '#1C1C1E'
+      text-dark-color: '#1C1C1E'
+      text-light-primary-color: '#1C1C1E'
       rgb-primary-text-color: 255, 255, 255
+      rgb-text-primary-color: 255, 255, 255
+      rgb-accent-color: 236, 243, 253
       lumo-body-text-color: '#FFFFFF'
       ha-color-surface-default: '#5A5A5E'
       ha-color-surface-low: '#48484A'
@@ -104,42 +108,42 @@ Liquid Glass 26:
       ha-color-border-neutral-quiet: '#636366'
       ha-color-border-neutral-normal: '#636366'
       ha-color-border-neutral-loud: '#FFFFFF'
-      ha-color-border-primary-quiet: rgba(214, 232, 253, 0.25)
-      ha-color-border-primary-normal: '#d6e8fd'
+      ha-color-border-primary-quiet: rgba(236, 243, 253, 0.25)
+      ha-color-border-primary-normal: '#ecf3fd'
       ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.24)
       ha-color-fill-neutral-quiet-hover: rgba(120, 120, 128, 0.32)
       ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.36)
       ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.32)
       ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.36)
       ha-color-fill-neutral-loud-resting: '#3A3A3C'
-      ha-color-fill-primary-quiet-resting: rgba(214, 232, 253, 0.14)
-      ha-color-fill-primary-quiet-hover: rgba(214, 232, 253, 0.22)
-      ha-color-fill-primary-quiet-active: rgba(214, 232, 253, 0.28)
-      ha-color-fill-primary-normal-resting: '#d6e8fd'
-      ha-color-fill-primary-normal-hover: '#ecf3fd'
-      ha-color-fill-primary-normal-active: '#ecf3fd'
-      ha-color-fill-primary-loud-resting: '#d6e8fd'
-      ha-color-fill-primary-loud-hover: '#ecf3fd'
-      ha-color-fill-primary-loud-active: '#ecf3fd'
+      ha-color-fill-primary-quiet-resting: rgba(236, 243, 253, 0.14)
+      ha-color-fill-primary-quiet-hover: rgba(236, 243, 253, 0.22)
+      ha-color-fill-primary-quiet-active: rgba(236, 243, 253, 0.28)
+      ha-color-fill-primary-normal-resting: '#ecf3fd'
+      ha-color-fill-primary-normal-hover: '#d6e8fd'
+      ha-color-fill-primary-normal-active: '#acd2fe'
+      ha-color-fill-primary-loud-resting: '#ecf3fd'
+      ha-color-fill-primary-loud-hover: '#d6e8fd'
+      ha-color-fill-primary-loud-active: '#acd2fe'
       ha-color-fill-disabled-quiet-resting: rgba(118, 118, 128, 0.24)
       ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.24)
       ha-color-on-neutral-quiet: '#FFFFFF'
       ha-color-on-neutral-normal: '#FFFFFF'
       ha-color-on-neutral-loud: '#FFFFFF'
-      ha-color-on-primary-quiet: '#d6e8fd'
+      ha-color-on-primary-quiet: '#ecf3fd'
       ha-color-on-primary-normal: '#1C1C1E'
       ha-color-on-primary-loud: '#1C1C1E'
       ha-color-on-disabled-quiet: '#D1D1D6'
       ha-color-on-disabled-normal: '#D1D1D6'
-      wa-color-brand-fill-loud: '#d6e8fd'
-      wa-color-brand-fill-normal: rgba(214, 232, 253, 0.16)
-      wa-color-brand-fill-quiet: rgba(214, 232, 253, 0.1)
-      wa-color-brand-border-loud: '#d6e8fd'
-      wa-color-brand-border-normal: rgba(214, 232, 253, 0.45)
-      wa-color-brand-border-quiet: rgba(214, 232, 253, 0.22)
+      wa-color-brand-fill-loud: '#ecf3fd'
+      wa-color-brand-fill-normal: rgba(236, 243, 253, 0.16)
+      wa-color-brand-fill-quiet: rgba(236, 243, 253, 0.1)
+      wa-color-brand-border-loud: '#ecf3fd'
+      wa-color-brand-border-normal: rgba(236, 243, 253, 0.45)
+      wa-color-brand-border-quiet: rgba(236, 243, 253, 0.22)
       wa-color-brand-on-loud: '#1C1C1E'
-      wa-color-brand-on-normal: '#d6e8fd'
-      wa-color-brand-on-quiet: '#d6e8fd'
+      wa-color-brand-on-normal: '#ecf3fd'
+      wa-color-brand-on-quiet: '#ecf3fd'
       wa-color-neutral-fill-loud: '#3A3A3C'
       wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.32)
       wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.24)
@@ -158,13 +162,19 @@ Liquid Glass 26:
       wa-form-control-border-color: '#636366'
       wa-form-control-value-color: '#FFFFFF'
       wa-form-control-placeholder-color: '#D1D1D6'
+      mdc-theme-primary: '#ecf3fd'
+      mdc-theme-secondary: '#ecf3fd'
+      mdc-theme-on-primary: '#1C1C1E'
+      mdc-theme-on-secondary: '#1C1C1E'
+      mdc-theme-on-surface: '#FFFFFF'
+      mdc-theme-background: '#48484A'
       sidebar-text-color: '#FFFFFF'
       sidebar-icon-color: '#FFFFFF'
-      sidebar-selected-icon-color: '#d6e8fd'
+      sidebar-selected-icon-color: '#ecf3fd'
       sidebar-menu-button-background-color: transparent
       sidebar-menu-button-text-color: '#FFFFFF'
       state-icon-color: '#E5E5EA'
-      state-icon-active-color: '#d6e8fd'
+      state-icon-active-color: '#ecf3fd'
       state-icon-unavailable-color: '#FFC7C2'
       state-unavailable-color: '#FFC7C2'
       state-inactive-color: '#E5E5EA'
@@ -187,39 +197,39 @@ Liquid Glass 26:
       input-dropdown-icon-color: '#FFFFFF'
       input-idle-line-color: '#636366'
       input-hover-line-color: '#D1D1D6'
-      switch-checked-track-color: '#d6e8fd'
+      switch-checked-track-color: '#ecf3fd'
       switch-checked-button-color: '#1C1C1E'
       switch-unchecked-track-color: '#E5E5EA'
       switch-unchecked-button-color: '#1C1C1E'
-      ha-switch-checked-background-color: '#d6e8fd'
+      ha-switch-checked-background-color: '#ecf3fd'
       ha-switch-checked-thumb-color: '#1C1C1E'
-      ha-checkbox-checked-background-color: '#d6e8fd'
+      ha-checkbox-checked-background-color: '#ecf3fd'
       ha-checkbox-checked-icon-color: '#1C1C1E'
       ha-checkbox-border-color: '#E5E5EA'
-      slider-color: '#d6e8fd'
+      slider-color: '#ecf3fd'
       slider-secondary-color: rgba(120, 120, 128, 0.32)
       slider-track-color: rgba(120, 120, 128, 0.36)
       table-row-background-color: '#5A5A5E'
       data-table-background-color: '#5A5A5E'
       markdown-code-background-color: rgba(118, 118, 128, 0.24)
       code-editor-background-color: rgba(118, 118, 128, 0.24)
-      markdown-link-color: '#d6e8fd'
+      markdown-link-color: '#ecf3fd'
       ha-tooltip-background-color: '#6C6C70'
       ha-tooltip-text-color: '#FFFFFF'
-      ha-tab-indicator-color: '#d6e8fd'
+      ha-tab-indicator-color: '#ecf3fd'
       ha-tab-track-color: '#636366'
-      chat-background-color-user: rgba(214, 232, 253, 0.16)
+      chat-background-color-user: rgba(236, 243, 253, 0.16)
       chat-background-color-hass: rgba(118, 118, 128, 0.24)
       scrollbar-thumb-color: '#D1D1D6'
       label-badge-background-color: '#6C6C70'
       label-badge-text-color: '#FFFFFF'
       md-list-container-color: none
-      primary-color: '#d6e8fd'
-      accent-color: '#d6e8fd'
-      rgb-primary-color: 214, 232, 253
+      primary-color: '#ecf3fd'
+      accent-color: '#ecf3fd'
+      rgb-primary-color: 236, 243, 253
       app-theme-color: '#48484A'
-      ha-color-focus: '#d6e8fd'
-      wa-focus-ring-color: '#d6e8fd'
+      ha-color-focus: '#ecf3fd'
+      wa-focus-ring-color: '#ecf3fd'
       ha-color-primary-05: '#0a141f'
       ha-color-primary-10: '#09223f'
       ha-color-primary-20: '#06407f'
@@ -278,8 +288,12 @@ Liquid Glass 26:
       secondary-text-color: '#FFFFFF'
       disabled-text-color: '#D1D1D6'
       text-primary-color: '#FFFFFF'
-      text-dark-color: '#FFFFFF'
+      text-accent-color: '#1C1C1E'
+      text-dark-color: '#1C1C1E'
+      text-light-primary-color: '#1C1C1E'
       rgb-primary-text-color: 255, 255, 255
+      rgb-text-primary-color: 255, 255, 255
+      rgb-accent-color: 175, 213, 254
       lumo-body-text-color: '#FFFFFF'
       ha-color-surface-default: '#1C1C1E'
       ha-color-surface-low: '#000000'
@@ -348,6 +362,12 @@ Liquid Glass 26:
       wa-form-control-border-color: '#636366'
       wa-form-control-value-color: '#FFFFFF'
       wa-form-control-placeholder-color: '#D1D1D6'
+      mdc-theme-primary: '#afd5fe'
+      mdc-theme-secondary: '#afd5fe'
+      mdc-theme-on-primary: '#1C1C1E'
+      mdc-theme-on-secondary: '#1C1C1E'
+      mdc-theme-on-surface: '#FFFFFF'
+      mdc-theme-background: '#000000'
       sidebar-text-color: '#FFFFFF'
       sidebar-icon-color: '#FFFFFF'
       sidebar-selected-icon-color: '#afd5fe'

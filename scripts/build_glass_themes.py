@@ -223,9 +223,9 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # Keep the Apple system colour in the exported palette, but use a darker
     # ramp stop for light-mode interactive UI where system orange/blue on a
     # near-white material does not meet the 3:1 graphical-contrast floor.
-    ui_brand = prim[90] if light else prim[80]
-    brand_hover = prim[95] if light else prim[90]
-    brand_active = prim[95]
+    ui_brand = prim[95] if light else prim[80]
+    brand_hover = prim[90] if light else prim[90]
+    brand_active = prim[80] if light else prim[95]
     state_icon = "#E5E5EA"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
@@ -298,8 +298,12 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "secondary-text-color": fg2,
         "disabled-text-color": fg3,
         "text-primary-color": fg,
-        "text-dark-color": fg,
+        "text-accent-color": on_brand,
+        "text-dark-color": on_brand,
+        "text-light-primary-color": on_brand,
         "rgb-primary-text-color": ", ".join(str(c) for c in hex2rgb(fg)),
+        "rgb-text-primary-color": ", ".join(str(c) for c in hex2rgb(fg)),
+        "rgb-accent-color": ", ".join(str(c) for c in hex2rgb(ui_brand)),
         "lumo-body-text-color": fg,
 
         # ---- semantic surfaces (new in 2026, unstyled by pre-2026 themes) -
@@ -378,6 +382,16 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "wa-form-control-border-color": sep,
         "wa-form-control-value-color": fg,
         "wa-form-control-placeholder-color": fg3,
+
+        # ---- remaining Material components --------------------------------
+        # A few dialogs/menus still consume MDC roles in HA 2026.7. Their
+        # foreground must follow the pale brand fill, not generic white ink.
+        "mdc-theme-primary": ui_brand,
+        "mdc-theme-secondary": ui_brand,
+        "mdc-theme-on-primary": on_brand,
+        "mdc-theme-on-secondary": on_brand,
+        "mdc-theme-on-surface": fg,
+        "mdc-theme-background": page,
 
         # ---- sidebar (--sidebar-selected-text-color is DEAD in 2026) ------
         "sidebar-text-color": fg2,
