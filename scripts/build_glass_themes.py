@@ -135,6 +135,10 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
     # HA's neutral ramp is mode-independent and must run dark -> light.
     for step, hexv in zip(RAMP_STEPS, APPLE_NEUTRALS):
         t[f"ha-color-neutral-{step:02d}"] = hexv
+    # ha-toast lives outside some view-theme scopes. These mode-independent
+    # values must therefore exist at the root as well as in each mode.
+    t["ha-color-on-neutral-loud"] = "#FFFFFF"
+    t["wa-color-neutral-on-loud"] = "#FFFFFF"
 
     # ---- typography ------------------------------------------------------
     # -apple-system resolves to SF UI on Apple platforms. Apple differentiates
@@ -216,14 +220,14 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # Keep the Apple system colour in the exported palette, but use a darker
     # ramp stop for light-mode interactive UI where system orange/blue on a
     # near-white material does not meet the 3:1 graphical-contrast floor.
-    ui_brand = prim[20] if light else prim[70]
-    brand_hover = prim[10] if light else prim[80]
-    brand_active = prim[5] if light else prim[90]
+    ui_brand = prim[20] if light else prim[80]
+    brand_hover = prim[10] if light else prim[90]
+    brand_active = prim[5] if light else prim[95]
     state_icon = "#48484A" if light else "#D1D1D6"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
-    unavailable_icon = "#A61B1B" if light else "#FF9A94"
-    off_track = "#636366" if light else "#AEAEB2"
+    unavailable_icon = "#A61B1B" if light else "#FFC7C2"
+    off_track = "#48484A" if light else "#D1D1D6"
     off_thumb = "#FFFFFF" if light else "#1C1C1E"
     control_fill = "#E5E5EA" if light else "#48484A"
     control_hover = "#D1D1D6" if light else "#636366"

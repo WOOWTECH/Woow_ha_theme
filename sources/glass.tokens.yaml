@@ -36,12 +36,12 @@ materials:
   light:
     thin:    "rgba(255, 255, 255, 0.60)"
     regular: "rgba(246, 246, 246, 0.72)"
-    content: "rgba(246, 246, 246, 0.76)"
+    content: "rgba(246, 246, 246, 0.66)"
     thick:   "rgba(246, 246, 246, 0.84)"
   dark:
     thin:    "rgba(37, 37, 37, 0.45)"
     regular: "rgba(37, 37, 37, 0.65)"
-    content: "rgba(37, 37, 37, 0.72)"
+    content: "rgba(37, 37, 37, 0.62)"
     thick:   "rgba(37, 37, 37, 0.84)"
 
 # apple.com's own nav uses backdrop-filter: saturate(180%) blur(20px).
@@ -110,16 +110,16 @@ ink:
   # retain contrast after material compositing.
   light:
     primary:   "#1C1C1E"
-    secondary: "#48484A"
-    tertiary:  "#636366"
+    secondary: "#3A3A3C"
+    tertiary:  "#48484A"
     separator: "#C7C7CC"
     fill1:     "rgba(120, 120, 128, 0.20)"
     fill2:     "rgba(120, 120, 128, 0.16)"
     fill3:     "rgba(118, 118, 128, 0.12)"
   dark:
     primary:   "#FFFFFF"
-    secondary: "#D1D1D6"
-    tertiary:  "#8E8E93"
+    secondary: "#F2F2F7"
+    tertiary:  "#D1D1D6"
     separator: "#636366"
     fill1:     "rgba(120, 120, 128, 0.36)"
     fill2:     "rgba(120, 120, 128, 0.32)"
