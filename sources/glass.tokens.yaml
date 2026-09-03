@@ -36,10 +36,12 @@ materials:
   light:
     thin:    "rgba(255, 255, 255, 0.60)"
     regular: "rgba(246, 246, 246, 0.72)"
+    content: "rgba(246, 246, 246, 0.76)"
     thick:   "rgba(246, 246, 246, 0.84)"
   dark:
     thin:    "rgba(37, 37, 37, 0.45)"
     regular: "rgba(37, 37, 37, 0.65)"
+    content: "rgba(37, 37, 37, 0.72)"
     thick:   "rgba(37, 37, 37, 0.84)"
 
 # apple.com's own nav uses backdrop-filter: saturate(180%) blur(20px).

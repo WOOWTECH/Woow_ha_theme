@@ -206,7 +206,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # Navigation remains glass. Content cards use thick material so a busy
     # wallpaper cannot erase state, text, or control affordances beneath it.
     nav_material = cfg["materials"][mode]["regular"]
-    content_material = cfg["materials"][mode]["thick"]
+    content_material = cfg["materials"][mode]["content"]
     thick = cfg["materials"][mode]["thick"]
     wp = v["wallpaper"][mode]
     page, surface, elevated = v["page"][mode], v["surface"][mode], v["elevated"][mode]
@@ -216,14 +216,15 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # Keep the Apple system colour in the exported palette, but use a darker
     # ramp stop for light-mode interactive UI where system orange/blue on a
     # near-white material does not meet the 3:1 graphical-contrast floor.
-    ui_brand = prim[20] if light else prim[50]
-    brand_hover = prim[10] if light else prim[60]
-    brand_active = prim[5] if light else prim[70]
+    ui_brand = prim[20] if light else prim[70]
+    brand_hover = prim[10] if light else prim[80]
+    brand_active = prim[5] if light else prim[90]
     state_icon = "#48484A" if light else "#D1D1D6"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
-    unavailable_icon = "#A61B1B" if light else "#FF6961"
-    off_track = "#636366" if light else "#8E8E93"
+    unavailable_icon = "#A61B1B" if light else "#FF9A94"
+    off_track = "#636366" if light else "#AEAEB2"
+    off_thumb = "#FFFFFF" if light else "#1C1C1E"
     control_fill = "#E5E5EA" if light else "#48484A"
     control_hover = "#D1D1D6" if light else "#636366"
 
@@ -246,7 +247,11 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
 
     # Wallpaper: gradient underneath as the always-paints fallback (HACS does
     # not install www/), image on top. This is the ONLY place the image goes.
-    wallpaper = f"center / cover no-repeat fixed url('{wp['image']}'), {wp['gradient']}"
+    # A mild overlay normalises bright windows/deep shadows so transparent
+    # heading cards retain readable ink without flattening the photograph.
+    overlay = "rgba(255,255,255,0.20)" if light else "rgba(0,0,0,0.24)"
+    wallpaper = (f"linear-gradient({overlay}, {overlay}), "
+                 f"center / cover no-repeat fixed url('{wp['image']}'), {wp['gradient']}")
 
     t: dict[str, str] = {
         # ---- OPAQUE layer. Never translucent, never a gradient. -----------
@@ -407,7 +412,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "switch-checked-track-color": ui_brand,
         "switch-checked-button-color": on_brand,
         "switch-unchecked-track-color": off_track,
-        "switch-unchecked-button-color": "#ffffff",
+        "switch-unchecked-button-color": off_thumb,
         "ha-switch-checked-background-color": ui_brand,
         "ha-switch-checked-thumb-color": on_brand,
         "ha-checkbox-checked-background-color": ui_brand,
