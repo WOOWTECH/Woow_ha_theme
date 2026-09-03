@@ -63,6 +63,13 @@ def checks(tokens: dict[str, str], material: str, label: str) -> Iterable[tuple[
         "state-inactive-color",
         "state-icon-unavailable-color",
         "state-icon-active-color",
+        "state-unavailable-color",
+        "state-light-off-color",
+        "state-light-inactive-color",
+        "state-switch-off-color",
+        "state-switch-inactive-color",
+        "state-climate-off-color",
+        "state-climate-inactive-color",
     )
     for backdrop in BACKDROPS:
         base = composite(backdrop, (0, 0, 0))

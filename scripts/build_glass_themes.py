@@ -219,7 +219,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     ui_brand = prim[20] if light else prim[50]
     brand_hover = prim[10] if light else prim[60]
     brand_active = prim[5] if light else prim[70]
-    state_icon = "#636366" if light else "#AEAEB2"
+    state_icon = "#48484A" if light else "#D1D1D6"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
     unavailable_icon = "#A61B1B" if light else "#FF6961"
@@ -373,7 +373,18 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "state-icon-color": state_icon,
         "state-icon-active-color": ui_brand,
         "state-icon-unavailable-color": unavailable_icon,
+        "state-unavailable-color": unavailable_icon,
         "state-inactive-color": state_icon,
+        # Explicit domain/state entries outrank the generic fallback in
+        # stateColorCss. Keep these even though current HA falls back cleanly:
+        # they protect against stale/default domain variables and card-specific
+        # resolution paths.
+        "state-light-off-color": state_icon,
+        "state-light-inactive-color": state_icon,
+        "state-switch-off-color": state_icon,
+        "state-switch-inactive-color": state_icon,
+        "state-climate-off-color": state_icon,
+        "state-climate-inactive-color": state_icon,
 
         # ---- tiles / headings ----------------------------------------------
         "ha-tile-info-primary-color": fg,
