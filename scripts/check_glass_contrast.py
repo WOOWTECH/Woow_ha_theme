@@ -25,6 +25,7 @@ BACKDROPS = ("#E8DDC8", "#8F7C65", "#3D2918")
 TEXT_MIN = 4.5
 GRAPHIC_MIN = 3.0
 RGBA = re.compile(r"rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)(?:\s*,\s*([\d.]+))?\s*\)")
+BRIGHTNESS = re.compile(r"brightness\(\s*([\d.]+)%\s*\)")
 
 
 def parse_color(value: str) -> tuple[tuple[float, float, float], float]:
@@ -55,6 +56,13 @@ def contrast(a: tuple[float, float, float], b: tuple[float, float, float]) -> fl
     return (max(luminance(a), luminance(b)) + 0.05) / (min(luminance(a), luminance(b)) + 0.05)
 
 
+def filtered_backdrop(value: str, filter_value: str) -> tuple[float, float, float]:
+    color = parse_color(value)[0]
+    match = BRIGHTNESS.search(filter_value)
+    factor = float(match.group(1)) / 100 if match else 1.0
+    return tuple(min(255, channel * factor) for channel in color)
+
+
 def checks(tokens: dict[str, str], material: str, label: str) -> Iterable[tuple[str, str, float]]:
     text = ("ha-color-text-primary", "ha-color-text-secondary")
     graphics = (
@@ -72,7 +80,7 @@ def checks(tokens: dict[str, str], material: str, label: str) -> Iterable[tuple[
         "state-climate-inactive-color",
     )
     for backdrop in BACKDROPS:
-        base = composite(backdrop, (0, 0, 0))
+        base = filtered_backdrop(backdrop, tokens["ha-card-backdrop-filter"])
         surface = composite(material, base)
         for key in text:
             yield backdrop, key, contrast(composite(tokens[key], surface), surface) / TEXT_MIN

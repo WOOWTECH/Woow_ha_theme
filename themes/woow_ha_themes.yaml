@@ -3950,11 +3950,16 @@ Liquid Glass 26:
   wa-panel-border-radius: 20px
   wa-border-radius-l: 8px
   wa-form-control-border-radius: 10px
-  ha-card-feature-gap: 8px
-  ha-view-sections-column-gap: 16px
-  ha-view-sections-row-gap: 16px
-  ha-section-grid-column-gap: 12px
-  ha-section-grid-row-gap: 12px
+  ha-card-feature-gap: 7px
+  ha-view-sections-column-gap: 14px
+  ha-view-sections-row-gap: 14px
+  ha-view-sections-narrow-column-gap: 7px
+  ha-view-sections-row-height: 48px
+  ha-view-sections-column-max-width: 425px
+  ha-view-sections-column-min-width: 272px
+  ha-section-grid-column-gap: 10px
+  ha-section-grid-row-gap: 10px
+  ha-section-grid-row-height: 48px
   ha-switch-width: 51px
   ha-switch-size: 31px
   ha-switch-thumb-size: 27px
@@ -3980,8 +3985,9 @@ Liquid Glass 26:
       mdc-theme-surface: '#FFFFFF'
       lovelace-background: 'linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)), center / cover no-repeat fixed url(''/local/visionos-themes/macOS_26_Light.webp''), linear-gradient(155deg, #dfe6f2 0%, #c3cede 40%, #9fb0c6 100%)'
       background-image: 'linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)), center / cover no-repeat fixed url(''/local/visionos-themes/macOS_26_Light.webp''), linear-gradient(155deg, #dfe6f2 0%, #c3cede 40%, #9fb0c6 100%)'
-      ha-card-background: rgba(246, 246, 246, 0.59)
-      clear-background-color: rgba(246, 246, 246, 0.59)
+      ha-card-background: rgba(246, 246, 246, 0.49)
+      clear-background-color: rgba(246, 246, 246, 0.49)
+      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(140%)
       app-header-background-color: rgba(246, 246, 246, 0.72)
       ha-dialog-surface-background: rgba(246, 246, 246, 0.84)
       ha-bottom-sheet-surface-background: rgba(246, 246, 246, 0.84)
@@ -3989,11 +3995,11 @@ Liquid Glass 26:
       ha-card-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
       dialog-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
       ha-color-text-primary: '#1C1C1E'
-      ha-color-text-secondary: '#3A3A3C'
+      ha-color-text-secondary: '#2C2C2E'
       ha-color-text-disabled: '#48484A'
       ha-color-text-link: '#09223f'
       primary-text-color: '#1C1C1E'
-      secondary-text-color: '#3A3A3C'
+      secondary-text-color: '#2C2C2E'
       disabled-text-color: '#48484A'
       text-primary-color: '#1C1C1E'
       text-dark-color: '#1C1C1E'
@@ -4011,7 +4017,7 @@ Liquid Glass 26:
       outline-hover-color: '#48484A'
       ha-color-border-neutral-quiet: '#C7C7CC'
       ha-color-border-neutral-normal: '#C7C7CC'
-      ha-color-border-neutral-loud: '#3A3A3C'
+      ha-color-border-neutral-loud: '#2C2C2E'
       ha-color-border-primary-quiet: rgba(9, 34, 63, 0.25)
       ha-color-border-primary-normal: '#09223f'
       ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.12)
@@ -4051,14 +4057,14 @@ Liquid Glass 26:
       wa-color-neutral-fill-loud: '#3A3A3C'
       wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.16)
       wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.12)
-      wa-color-neutral-border-loud: '#3A3A3C'
+      wa-color-neutral-border-loud: '#2C2C2E'
       wa-color-neutral-border-normal: '#C7C7CC'
       wa-color-neutral-border-quiet: '#C7C7CC'
       wa-color-neutral-on-loud: '#FFFFFF'
       wa-color-neutral-on-normal: '#1C1C1E'
       wa-color-neutral-on-quiet: '#1C1C1E'
       wa-color-text-normal: '#1C1C1E'
-      wa-color-text-quiet: '#3A3A3C'
+      wa-color-text-quiet: '#2C2C2E'
       wa-color-surface-default: '#FFFFFF'
       wa-color-surface-raised: '#FFFFFF'
       wa-color-surface-border: '#C7C7CC'
@@ -4066,8 +4072,8 @@ Liquid Glass 26:
       wa-form-control-border-color: '#C7C7CC'
       wa-form-control-value-color: '#1C1C1E'
       wa-form-control-placeholder-color: '#48484A'
-      sidebar-text-color: '#3A3A3C'
-      sidebar-icon-color: '#3A3A3C'
+      sidebar-text-color: '#2C2C2E'
+      sidebar-icon-color: '#2C2C2E'
       sidebar-selected-icon-color: '#09223f'
       sidebar-menu-button-background-color: transparent
       sidebar-menu-button-text-color: '#1C1C1E'
@@ -4083,16 +4089,16 @@ Liquid Glass 26:
       state-climate-off-color: '#48484A'
       state-climate-inactive-color: '#48484A'
       ha-tile-info-primary-color: '#1C1C1E'
-      ha-tile-info-secondary-color: '#3A3A3C'
+      ha-tile-info-secondary-color: '#2C2C2E'
       tile-icon-color: '#48484A'
       ha-heading-card-title-color: '#1C1C1E'
-      ha-heading-card-subtitle-color: '#3A3A3C'
+      ha-heading-card-subtitle-color: '#2C2C2E'
       input-ink-color: '#1C1C1E'
       input-fill-color: '#E5E5EA'
       input-disabled-fill-color: '#E5E5EA'
-      input-label-ink-color: '#3A3A3C'
+      input-label-ink-color: '#2C2C2E'
       input-disabled-ink-color: '#48484A'
-      input-dropdown-icon-color: '#3A3A3C'
+      input-dropdown-icon-color: '#2C2C2E'
       input-idle-line-color: '#C7C7CC'
       input-hover-line-color: '#48484A'
       switch-checked-track-color: '#09223f'
@@ -4169,8 +4175,9 @@ Liquid Glass 26:
       mdc-theme-surface: '#1C1C1E'
       lovelace-background: 'linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.24)), center / cover no-repeat fixed url(''/local/visionos-themes/macOS_26_Dark.webp''), linear-gradient(155deg, #1c2028 0%, #12161d 50%, #07090d 100%)'
       background-image: 'linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.24)), center / cover no-repeat fixed url(''/local/visionos-themes/macOS_26_Dark.webp''), linear-gradient(155deg, #1c2028 0%, #12161d 50%, #07090d 100%)'
-      ha-card-background: rgba(28, 28, 30, 0.55)
-      clear-background-color: rgba(28, 28, 30, 0.55)
+      ha-card-background: rgba(28, 28, 30, 0.45)
+      clear-background-color: rgba(28, 28, 30, 0.45)
+      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(55%)
       app-header-background-color: rgba(37, 37, 37, 0.65)
       ha-dialog-surface-background: rgba(37, 37, 37, 0.84)
       ha-bottom-sheet-surface-background: rgba(37, 37, 37, 0.84)
@@ -4726,11 +4733,16 @@ VisionOS 26:
   wa-panel-border-radius: 22px
   wa-border-radius-l: 10px
   wa-form-control-border-radius: 10px
-  ha-card-feature-gap: 8px
-  ha-view-sections-column-gap: 16px
-  ha-view-sections-row-gap: 16px
-  ha-section-grid-column-gap: 12px
-  ha-section-grid-row-gap: 12px
+  ha-card-feature-gap: 7px
+  ha-view-sections-column-gap: 14px
+  ha-view-sections-row-gap: 14px
+  ha-view-sections-narrow-column-gap: 7px
+  ha-view-sections-row-height: 48px
+  ha-view-sections-column-max-width: 425px
+  ha-view-sections-column-min-width: 272px
+  ha-section-grid-column-gap: 10px
+  ha-section-grid-row-gap: 10px
+  ha-section-grid-row-height: 48px
   ha-switch-width: 51px
   ha-switch-size: 31px
   ha-switch-thumb-size: 27px
@@ -4756,8 +4768,9 @@ VisionOS 26:
       mdc-theme-surface: '#FFFFFF'
       lovelace-background: 'linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)), center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)'
       background-image: 'linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)), center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)'
-      ha-card-background: rgba(246, 246, 246, 0.59)
-      clear-background-color: rgba(246, 246, 246, 0.59)
+      ha-card-background: rgba(246, 246, 246, 0.49)
+      clear-background-color: rgba(246, 246, 246, 0.49)
+      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(140%)
       app-header-background-color: rgba(246, 246, 246, 0.72)
       ha-dialog-surface-background: rgba(246, 246, 246, 0.84)
       ha-bottom-sheet-surface-background: rgba(246, 246, 246, 0.84)
@@ -4765,11 +4778,11 @@ VisionOS 26:
       ha-card-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
       dialog-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
       ha-color-text-primary: '#1C1C1E'
-      ha-color-text-secondary: '#3A3A3C'
+      ha-color-text-secondary: '#2C2C2E'
       ha-color-text-disabled: '#48484A'
       ha-color-text-link: '#3f2809'
       primary-text-color: '#1C1C1E'
-      secondary-text-color: '#3A3A3C'
+      secondary-text-color: '#2C2C2E'
       disabled-text-color: '#48484A'
       text-primary-color: '#1C1C1E'
       text-dark-color: '#1C1C1E'
@@ -4787,7 +4800,7 @@ VisionOS 26:
       outline-hover-color: '#48484A'
       ha-color-border-neutral-quiet: '#C7C7CC'
       ha-color-border-neutral-normal: '#C7C7CC'
-      ha-color-border-neutral-loud: '#3A3A3C'
+      ha-color-border-neutral-loud: '#2C2C2E'
       ha-color-border-primary-quiet: rgba(63, 40, 9, 0.25)
       ha-color-border-primary-normal: '#3f2809'
       ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.12)
@@ -4827,14 +4840,14 @@ VisionOS 26:
       wa-color-neutral-fill-loud: '#3A3A3C'
       wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.16)
       wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.12)
-      wa-color-neutral-border-loud: '#3A3A3C'
+      wa-color-neutral-border-loud: '#2C2C2E'
       wa-color-neutral-border-normal: '#C7C7CC'
       wa-color-neutral-border-quiet: '#C7C7CC'
       wa-color-neutral-on-loud: '#FFFFFF'
       wa-color-neutral-on-normal: '#1C1C1E'
       wa-color-neutral-on-quiet: '#1C1C1E'
       wa-color-text-normal: '#1C1C1E'
-      wa-color-text-quiet: '#3A3A3C'
+      wa-color-text-quiet: '#2C2C2E'
       wa-color-surface-default: '#FFFFFF'
       wa-color-surface-raised: '#FFFFFF'
       wa-color-surface-border: '#C7C7CC'
@@ -4842,8 +4855,8 @@ VisionOS 26:
       wa-form-control-border-color: '#C7C7CC'
       wa-form-control-value-color: '#1C1C1E'
       wa-form-control-placeholder-color: '#48484A'
-      sidebar-text-color: '#3A3A3C'
-      sidebar-icon-color: '#3A3A3C'
+      sidebar-text-color: '#2C2C2E'
+      sidebar-icon-color: '#2C2C2E'
       sidebar-selected-icon-color: '#3f2809'
       sidebar-menu-button-background-color: transparent
       sidebar-menu-button-text-color: '#1C1C1E'
@@ -4859,16 +4872,16 @@ VisionOS 26:
       state-climate-off-color: '#48484A'
       state-climate-inactive-color: '#48484A'
       ha-tile-info-primary-color: '#1C1C1E'
-      ha-tile-info-secondary-color: '#3A3A3C'
+      ha-tile-info-secondary-color: '#2C2C2E'
       tile-icon-color: '#48484A'
       ha-heading-card-title-color: '#1C1C1E'
-      ha-heading-card-subtitle-color: '#3A3A3C'
+      ha-heading-card-subtitle-color: '#2C2C2E'
       input-ink-color: '#1C1C1E'
       input-fill-color: '#E5E5EA'
       input-disabled-fill-color: '#E5E5EA'
-      input-label-ink-color: '#3A3A3C'
+      input-label-ink-color: '#2C2C2E'
       input-disabled-ink-color: '#48484A'
-      input-dropdown-icon-color: '#3A3A3C'
+      input-dropdown-icon-color: '#2C2C2E'
       input-idle-line-color: '#C7C7CC'
       input-hover-line-color: '#48484A'
       switch-checked-track-color: '#3f2809'
@@ -4945,8 +4958,9 @@ VisionOS 26:
       mdc-theme-surface: '#1C1B19'
       lovelace-background: 'linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.24)), center / cover no-repeat fixed url(''/local/visionos-themes/night.jpg''), linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)'
       background-image: 'linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.24)), center / cover no-repeat fixed url(''/local/visionos-themes/night.jpg''), linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)'
-      ha-card-background: rgba(28, 28, 30, 0.55)
-      clear-background-color: rgba(28, 28, 30, 0.55)
+      ha-card-background: rgba(28, 28, 30, 0.45)
+      clear-background-color: rgba(28, 28, 30, 0.45)
+      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(55%)
       app-header-background-color: rgba(37, 37, 37, 0.65)
       ha-dialog-surface-background: rgba(37, 37, 37, 0.84)
       ha-bottom-sheet-surface-background: rgba(37, 37, 37, 0.84)

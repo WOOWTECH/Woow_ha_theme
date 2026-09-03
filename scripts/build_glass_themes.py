@@ -174,12 +174,19 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
     t["wa-border-radius-l"] = f"{inner}px"
     t["wa-form-control-border-radius"] = "10px"
 
-    # ---- spacing: Apple's 8pt grid with 4pt subdivisions, 16 the workhorse
-    t["ha-card-feature-gap"] = "8px"
-    t["ha-view-sections-column-gap"] = "16px"
-    t["ha-view-sections-row-gap"] = "16px"
-    t["ha-section-grid-column-gap"] = "12px"
-    t["ha-section-grid-row-gap"] = "12px"
+    # ---- compact layout: 85% of HA's section/card geometry ---------------
+    # Keep controls at the 44px HIG touch floor below; only card/grid geometry
+    # is compacted. 56px rows -> 48px, 500/320px columns -> 425/272px.
+    t["ha-card-feature-gap"] = "7px"
+    t["ha-view-sections-column-gap"] = "14px"
+    t["ha-view-sections-row-gap"] = "14px"
+    t["ha-view-sections-narrow-column-gap"] = "7px"
+    t["ha-view-sections-row-height"] = "48px"
+    t["ha-view-sections-column-max-width"] = "425px"
+    t["ha-view-sections-column-min-width"] = "272px"
+    t["ha-section-grid-column-gap"] = "10px"
+    t["ha-section-grid-row-gap"] = "10px"
+    t["ha-section-grid-row-height"] = "48px"
 
     # ---- control metrics: UISwitch is 51x31pt with a 27pt thumb ----------
     t["ha-switch-width"] = "51px"
@@ -211,6 +218,9 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # wallpaper cannot erase state, text, or control affordances beneath it.
     nav_material = cfg["materials"][mode]["regular"]
     content_material = cfg["materials"][mode]["content"]
+    card_brightness = "140%" if mode == "light" else "55%"
+    card_filter = (f"blur({cfg['blur']}) saturate({cfg['saturate']}) "
+                   f"brightness({card_brightness})")
     thick = cfg["materials"][mode]["thick"]
     wp = v["wallpaper"][mode]
     page, surface, elevated = v["page"][mode], v["surface"][mode], v["elevated"][mode]
@@ -278,6 +288,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         # ---- GLASS layer --------------------------------------------------
         "ha-card-background": content_material,
         "clear-background-color": content_material,
+        "ha-card-backdrop-filter": card_filter,
         "app-header-background-color": nav_material,
         "ha-dialog-surface-background": thick,
         "ha-bottom-sheet-surface-background": thick,
