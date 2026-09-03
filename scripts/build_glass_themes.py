@@ -145,7 +145,6 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
     # headline from body by WEIGHT at the same size, not by size.
     t["ha-font-family-body"] = cfg["font_stack"]
     t["ha-font-family-heading"] = cfg["font_stack"]
-    t["ha-font-size-scale"] = "0.85"
     t["ha-font-weight-heading"] = "700"
     t["ha-font-weight-action"] = "600"
     t["ha-line-height-normal"] = "1.29"      # 22/17, Apple body
@@ -175,23 +174,12 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
     t["wa-border-radius-l"] = f"{inner}px"
     t["wa-form-control-border-radius"] = "10px"
 
-    # ---- compact layout: 85% of HA's section/card geometry ---------------
-    # Scale the spacing tokens used for card padding together with typography
-    # so text-to-edge proportions remain stable. Larger control-size tokens
-    # stay untouched to preserve the 44px HIG tap-target floor.
-    for step in range(1, 9):
-        t[f"ha-space-{step}"] = f"{step * 3.4:g}px"
-    # 56px rows -> 48px, 500/320px columns -> 425/272px.
-    t["ha-card-feature-gap"] = "7px"
-    t["ha-view-sections-column-gap"] = "14px"
-    t["ha-view-sections-row-gap"] = "14px"
-    t["ha-view-sections-narrow-column-gap"] = "7px"
-    t["ha-view-sections-row-height"] = "48px"
-    t["ha-view-sections-column-max-width"] = "425px"
-    t["ha-view-sections-column-min-width"] = "272px"
-    t["ha-section-grid-column-gap"] = "10px"
-    t["ha-section-grid-row-gap"] = "10px"
-    t["ha-section-grid-row-height"] = "48px"
+    # ---- spacing: Apple's 8pt grid with 4pt subdivisions, 16 the workhorse
+    t["ha-card-feature-gap"] = "8px"
+    t["ha-view-sections-column-gap"] = "16px"
+    t["ha-view-sections-row-gap"] = "16px"
+    t["ha-section-grid-column-gap"] = "12px"
+    t["ha-section-grid-row-gap"] = "12px"
 
     # ---- control metrics: UISwitch is 51x31pt with a 27pt thumb ----------
     t["ha-switch-width"] = "51px"
@@ -223,7 +211,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # wallpaper cannot erase state, text, or control affordances beneath it.
     nav_material = cfg["materials"][mode]["regular"]
     content_material = cfg["materials"][mode]["content"]
-    card_brightness = "190%" if mode == "light" else "38%"
+    card_brightness = "190%" if mode == "light" else "62%"
     card_filter = (f"blur({cfg['blur']}) saturate({cfg['saturate']}) "
                    f"brightness({card_brightness})")
     thick = cfg["materials"][mode]["thick"]

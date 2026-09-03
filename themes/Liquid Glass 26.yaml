@@ -16,7 +16,6 @@ Liquid Glass 26:
   wa-color-neutral-on-loud: '#FFFFFF'
   ha-font-family-body: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
   ha-font-family-heading: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-  ha-font-size-scale: '0.85'
   ha-font-weight-heading: '700'
   ha-font-weight-action: '600'
   ha-line-height-normal: '1.29'
@@ -42,24 +41,11 @@ Liquid Glass 26:
   wa-panel-border-radius: 20px
   wa-border-radius-l: 8px
   wa-form-control-border-radius: 10px
-  ha-space-1: 3.4px
-  ha-space-2: 6.8px
-  ha-space-3: 10.2px
-  ha-space-4: 13.6px
-  ha-space-5: 17px
-  ha-space-6: 20.4px
-  ha-space-7: 23.8px
-  ha-space-8: 27.2px
-  ha-card-feature-gap: 7px
-  ha-view-sections-column-gap: 14px
-  ha-view-sections-row-gap: 14px
-  ha-view-sections-narrow-column-gap: 7px
-  ha-view-sections-row-height: 48px
-  ha-view-sections-column-max-width: 425px
-  ha-view-sections-column-min-width: 272px
-  ha-section-grid-column-gap: 10px
-  ha-section-grid-row-gap: 10px
-  ha-section-grid-row-height: 48px
+  ha-card-feature-gap: 8px
+  ha-view-sections-column-gap: 16px
+  ha-view-sections-row-gap: 16px
+  ha-section-grid-column-gap: 12px
+  ha-section-grid-row-gap: 12px
   ha-switch-width: 51px
   ha-switch-size: 31px
   ha-switch-thumb-size: 27px
@@ -277,7 +263,7 @@ Liquid Glass 26:
       background-image: 'linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.24)), center / cover no-repeat fixed url(''/local/visionos-themes/macOS_26_Dark.webp''), linear-gradient(155deg, #1c2028 0%, #12161d 50%, #07090d 100%)'
       ha-card-background: rgba(28, 28, 30, 0.25)
       clear-background-color: rgba(28, 28, 30, 0.25)
-      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(38%)
+      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(62%)
       app-header-background-color: rgba(37, 37, 37, 0.65)
       ha-dialog-surface-background: rgba(37, 37, 37, 0.84)
       ha-bottom-sheet-surface-background: rgba(37, 37, 37, 0.84)
