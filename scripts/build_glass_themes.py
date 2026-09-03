@@ -227,6 +227,10 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     off_thumb = "#FFFFFF" if light else "#1C1C1E"
     control_fill = "#E5E5EA" if light else "#48484A"
     control_hover = "#D1D1D6" if light else "#636366"
+    # HA 2026.7's toast uses neutral-10 (always dark) plus this on-loud
+    # role. Keep the entire loud-neutral pairing dark-on-light independent.
+    neutral_loud = "#3A3A3C"
+    neutral_on_loud = "#FFFFFF"
 
     fg, fg2, fg3 = ink["primary"], ink["secondary"], ink["tertiary"]
     sep, fill1, fill2, fill3 = ink["separator"], ink["fill1"], ink["fill2"], ink["fill3"]
@@ -315,7 +319,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-fill-neutral-quiet-active": fill1,
         "ha-color-fill-neutral-normal-resting": fill2,
         "ha-color-fill-neutral-normal-hover": fill1,
-        "ha-color-fill-neutral-loud-resting": fg2,
+        "ha-color-fill-neutral-loud-resting": neutral_loud,
         "ha-color-fill-primary-quiet-resting": rgba(ui_brand, 0.14),
         "ha-color-fill-primary-quiet-hover": rgba(ui_brand, 0.22),
         "ha-color-fill-primary-quiet-active": rgba(ui_brand, 0.28),
@@ -329,7 +333,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-fill-disabled-normal-resting": fill3,
         "ha-color-on-neutral-quiet": fg,
         "ha-color-on-neutral-normal": fg,
-        "ha-color-on-neutral-loud": page,
+        "ha-color-on-neutral-loud": neutral_on_loud,
         # On a light backdrop a brand-coloured label on a brand-tinted fill
         # needs the darker ramp step (orange on light orange especially).
         "ha-color-on-primary-quiet": ui_brand,
@@ -348,13 +352,13 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "wa-color-brand-on-loud": on_brand,
         "wa-color-brand-on-normal": ui_brand,
         "wa-color-brand-on-quiet": ui_brand,
-        "wa-color-neutral-fill-loud": fg2,
+        "wa-color-neutral-fill-loud": neutral_loud,
         "wa-color-neutral-fill-normal": fill2,
         "wa-color-neutral-fill-quiet": fill3,
         "wa-color-neutral-border-loud": fg2,
         "wa-color-neutral-border-normal": sep,
         "wa-color-neutral-border-quiet": sep,
-        "wa-color-neutral-on-loud": page,
+        "wa-color-neutral-on-loud": neutral_on_loud,
         "wa-color-neutral-on-normal": fg,
         "wa-color-neutral-on-quiet": fg,
         "wa-color-text-normal": fg,

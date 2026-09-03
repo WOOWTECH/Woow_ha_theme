@@ -108,7 +108,7 @@ VisionOS 26:
       ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.20)
       ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.16)
       ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.20)
-      ha-color-fill-neutral-loud-resting: '#48484A'
+      ha-color-fill-neutral-loud-resting: '#3A3A3C'
       ha-color-fill-primary-quiet-resting: rgba(127, 76, 6, 0.14)
       ha-color-fill-primary-quiet-hover: rgba(127, 76, 6, 0.22)
       ha-color-fill-primary-quiet-active: rgba(127, 76, 6, 0.28)
@@ -122,7 +122,7 @@ VisionOS 26:
       ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.12)
       ha-color-on-neutral-quiet: '#1C1C1E'
       ha-color-on-neutral-normal: '#1C1C1E'
-      ha-color-on-neutral-loud: '#F2F1EE'
+      ha-color-on-neutral-loud: '#FFFFFF'
       ha-color-on-primary-quiet: '#7f4c06'
       ha-color-on-primary-normal: '#ffffff'
       ha-color-on-primary-loud: '#ffffff'
@@ -137,13 +137,13 @@ VisionOS 26:
       wa-color-brand-on-loud: '#ffffff'
       wa-color-brand-on-normal: '#7f4c06'
       wa-color-brand-on-quiet: '#7f4c06'
-      wa-color-neutral-fill-loud: '#48484A'
+      wa-color-neutral-fill-loud: '#3A3A3C'
       wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.16)
       wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.12)
       wa-color-neutral-border-loud: '#48484A'
       wa-color-neutral-border-normal: '#C7C7CC'
       wa-color-neutral-border-quiet: '#C7C7CC'
-      wa-color-neutral-on-loud: '#F2F1EE'
+      wa-color-neutral-on-loud: '#FFFFFF'
       wa-color-neutral-on-normal: '#1C1C1E'
       wa-color-neutral-on-quiet: '#1C1C1E'
       wa-color-text-normal: '#1C1C1E'
@@ -297,7 +297,7 @@ VisionOS 26:
       ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.36)
       ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.32)
       ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.36)
-      ha-color-fill-neutral-loud-resting: '#D1D1D6'
+      ha-color-fill-neutral-loud-resting: '#3A3A3C'
       ha-color-fill-primary-quiet-resting: rgba(253, 206, 135, 0.14)
       ha-color-fill-primary-quiet-hover: rgba(253, 206, 135, 0.22)
       ha-color-fill-primary-quiet-active: rgba(253, 206, 135, 0.28)
@@ -311,7 +311,7 @@ VisionOS 26:
       ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.24)
       ha-color-on-neutral-quiet: '#FFFFFF'
       ha-color-on-neutral-normal: '#FFFFFF'
-      ha-color-on-neutral-loud: '#0D0C0B'
+      ha-color-on-neutral-loud: '#FFFFFF'
       ha-color-on-primary-quiet: '#fdce87'
       ha-color-on-primary-normal: '#1C1C1E'
       ha-color-on-primary-loud: '#1C1C1E'
@@ -326,13 +326,13 @@ VisionOS 26:
       wa-color-brand-on-loud: '#1C1C1E'
       wa-color-brand-on-normal: '#fdce87'
       wa-color-brand-on-quiet: '#fdce87'
-      wa-color-neutral-fill-loud: '#D1D1D6'
+      wa-color-neutral-fill-loud: '#3A3A3C'
       wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.32)
       wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.24)
       wa-color-neutral-border-loud: '#D1D1D6'
       wa-color-neutral-border-normal: '#636366'
       wa-color-neutral-border-quiet: '#636366'
-      wa-color-neutral-on-loud: '#0D0C0B'
+      wa-color-neutral-on-loud: '#FFFFFF'
       wa-color-neutral-on-normal: '#FFFFFF'
       wa-color-neutral-on-quiet: '#FFFFFF'
       wa-color-text-normal: '#FFFFFF'

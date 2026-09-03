@@ -89,7 +89,9 @@ def main() -> int:
     for path in THEMES:
         theme = yaml.safe_load(path.read_text(encoding="utf-8"))
         name, values = next(iter(theme.items()))
-        for mode, tokens in values["modes"].items():
+        global_tokens = {key: value for key, value in values.items() if key != "modes"}
+        for mode, mode_tokens in values["modes"].items():
+            tokens = {**global_tokens, **mode_tokens}
             header = tokens["app-header-background-color"]
             if header == "transparent":
                 failures.append(f"{name}/{mode}: app-header-background-color must be a material, not transparent")
@@ -98,6 +100,13 @@ def main() -> int:
                     failures.append(
                         f"{name}/{mode} on {backdrop}: {key} is {normalized * (TEXT_MIN if key.startswith('ha-color-text') else GRAPHIC_MIN):.2f}:1"
                     )
+            # HA 2026.7's ha-toast hardcodes neutral-10 as its surface and
+            # ha-color-on-neutral-loud as its message/action colour.
+            toast = composite(tokens["ha-color-neutral-10"], (0, 0, 0))
+            toast_text = composite(tokens["ha-color-on-neutral-loud"], toast)
+            toast_ratio = contrast(toast_text, toast)
+            if toast_ratio < TEXT_MIN:
+                failures.append(f"{name}/{mode}: toast text is {toast_ratio:.2f}:1")
     if failures:
         print("glass contrast check FAILED:")
         print("\n".join(f"- {failure}" for failure in failures))
