@@ -211,7 +211,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # wallpaper cannot erase state, text, or control affordances beneath it.
     nav_material = cfg["materials"][mode]["regular"]
     content_material = cfg["materials"][mode]["content"]
-    card_brightness = "190%" if mode == "light" else "62%"
+    card_brightness = "62%"
     card_filter = (f"blur({cfg['blur']}) saturate({cfg['saturate']}) "
                    f"brightness({card_brightness})")
     thick = cfg["materials"][mode]["thick"]
@@ -223,17 +223,17 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # Keep the Apple system colour in the exported palette, but use a darker
     # ramp stop for light-mode interactive UI where system orange/blue on a
     # near-white material does not meet the 3:1 graphical-contrast floor.
-    ui_brand = prim[10] if light else prim[80]
-    brand_hover = prim[5] if light else prim[90]
-    brand_active = prim[5] if light else prim[95]
-    state_icon = "#2C2C2E" if light else "#E5E5EA"
+    ui_brand = prim[90] if light else prim[80]
+    brand_hover = prim[95] if light else prim[90]
+    brand_active = prim[95]
+    state_icon = "#E5E5EA"
     # Off remains neutral; unavailable is an accessible fault colour, rather
     # than the same faint grey used for an intentionally disabled control.
-    unavailable_icon = "#650B0B" if light else "#FFC7C2"
-    off_track = "#2C2C2E" if light else "#E5E5EA"
-    off_thumb = "#FFFFFF" if light else "#1C1C1E"
-    control_fill = "#E5E5EA" if light else "#48484A"
-    control_hover = "#D1D1D6" if light else "#636366"
+    unavailable_icon = "#FFC7C2"
+    off_track = "#E5E5EA"
+    off_thumb = "#1C1C1E"
+    control_fill = "#48484A"
+    control_hover = "#636366"
     # HA 2026.7's toast uses neutral-10 (always dark) plus this on-loud
     # role. Keep the entire loud-neutral pairing dark-on-light independent.
     neutral_loud = "#3A3A3C"
@@ -247,9 +247,9 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     # wide low-opacity grounding shadow. A uniform 1px border reads as a
     # sticker; asymmetric inset highlights read as lit glass.
     if light:
-        rim_hi, rim_lo = "rgba(255,255,255,0.75)", "rgba(255,255,255,0.20)"
-        drop = "0 8px 32px rgba(0,0,0,0.10)"
-        on_brand = "#ffffff"
+        rim_hi, rim_lo = "rgba(255,255,255,0.34)", "rgba(255,255,255,0.10)"
+        drop = "0 8px 32px rgba(0,0,0,0.18)"
+        on_brand = "#1C1C1E"
     else:
         rim_hi, rim_lo = "rgba(255,255,255,0.22)", "rgba(255,255,255,0.06)"
         drop = "0 8px 32px rgba(0,0,0,0.34)"
@@ -299,7 +299,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "disabled-text-color": fg3,
         "text-primary-color": fg,
         "text-dark-color": fg,
-        "rgb-primary-text-color": "0, 0, 0" if light else "255, 255, 255",
+        "rgb-primary-text-color": ", ".join(str(c) for c in hex2rgb(fg)),
         "lumo-body-text-color": fg,
 
         # ---- semantic surfaces (new in 2026, unstyled by pre-2026 themes) -

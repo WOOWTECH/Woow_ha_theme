@@ -62,164 +62,164 @@ VisionOS 26:
   ha-card-border-width: '0'
   modes:
     light:
-      primary-background-color: '#F2F1EE'
-      secondary-background-color: '#FFFFFF'
-      card-background-color: '#FFFFFF'
-      material-background-color: '#FFFFFF'
-      sidebar-background-color: '#FFFFFF'
-      table-row-alternative-background-color: '#f8f8f9'
-      mdc-theme-surface: '#FFFFFF'
+      primary-background-color: '#4A4743'
+      secondary-background-color: '#5A5650'
+      card-background-color: '#5A5650'
+      material-background-color: '#5A5650'
+      sidebar-background-color: '#5A5650'
+      table-row-alternative-background-color: '#5d5954'
+      mdc-theme-surface: '#5A5650'
       lovelace-background: 'linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)), center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)'
       background-image: 'linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)), center / cover no-repeat fixed url(''/local/visionos-themes/day.jpg''), linear-gradient(160deg, #f0ebe3 0%, #ded5c8 45%, #c2b7a6 100%)'
-      ha-card-background: rgba(246, 246, 246, 0.29)
-      clear-background-color: rgba(246, 246, 246, 0.29)
-      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(190%)
-      app-header-background-color: rgba(246, 246, 246, 0.72)
-      ha-dialog-surface-background: rgba(246, 246, 246, 0.84)
-      ha-bottom-sheet-surface-background: rgba(246, 246, 246, 0.84)
-      ha-bottom-sheet-handle-color: '#3A3A3C'
-      ha-card-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
-      dialog-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.20), 0 8px 32px rgba(0,0,0,0.10)
-      ha-color-text-primary: '#1C1C1E'
-      ha-color-text-secondary: '#1C1C1E'
-      ha-color-text-disabled: '#3A3A3C'
-      ha-color-text-link: '#3f2809'
-      primary-text-color: '#1C1C1E'
-      secondary-text-color: '#1C1C1E'
-      disabled-text-color: '#3A3A3C'
-      text-primary-color: '#1C1C1E'
-      text-dark-color: '#1C1C1E'
-      rgb-primary-text-color: 0, 0, 0
-      lumo-body-text-color: '#1C1C1E'
-      ha-color-surface-default: '#FFFFFF'
-      ha-color-surface-low: '#F2F1EE'
-      ha-color-surface-lower: '#e6e5e3'
-      ha-color-on-surface-default: '#1C1C1E'
-      ha-color-form-background: '#E5E5EA'
-      ha-color-form-hover: '#D1D1D6'
-      ha-color-form-disabled: '#E5E5EA'
-      divider-color: '#C7C7CC'
-      outline-color: '#C7C7CC'
-      outline-hover-color: '#3A3A3C'
-      ha-color-border-neutral-quiet: '#C7C7CC'
-      ha-color-border-neutral-normal: '#C7C7CC'
-      ha-color-border-neutral-loud: '#1C1C1E'
-      ha-color-border-primary-quiet: rgba(63, 40, 9, 0.25)
-      ha-color-border-primary-normal: '#3f2809'
-      ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.12)
-      ha-color-fill-neutral-quiet-hover: rgba(120, 120, 128, 0.16)
-      ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.20)
-      ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.16)
-      ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.20)
+      ha-card-background: rgba(60, 60, 67, 0.25)
+      clear-background-color: rgba(60, 60, 67, 0.25)
+      ha-card-backdrop-filter: blur(20px) saturate(180%) brightness(62%)
+      app-header-background-color: rgba(84, 84, 88, 0.55)
+      ha-dialog-surface-background: rgba(72, 72, 74, 0.78)
+      ha-bottom-sheet-surface-background: rgba(72, 72, 74, 0.78)
+      ha-bottom-sheet-handle-color: '#D1D1D6'
+      ha-card-box-shadow: inset 0 1px 0 rgba(255,255,255,0.34), inset 0 -1px 0 rgba(255,255,255,0.10), 0 8px 32px rgba(0,0,0,0.18)
+      dialog-box-shadow: inset 0 1px 0 rgba(255,255,255,0.34), inset 0 -1px 0 rgba(255,255,255,0.10), 0 8px 32px rgba(0,0,0,0.18)
+      ha-color-text-primary: '#FFFFFF'
+      ha-color-text-secondary: '#FFFFFF'
+      ha-color-text-disabled: '#D1D1D6'
+      ha-color-text-link: '#fcecd8'
+      primary-text-color: '#FFFFFF'
+      secondary-text-color: '#FFFFFF'
+      disabled-text-color: '#D1D1D6'
+      text-primary-color: '#FFFFFF'
+      text-dark-color: '#FFFFFF'
+      rgb-primary-text-color: 255, 255, 255
+      lumo-body-text-color: '#FFFFFF'
+      ha-color-surface-default: '#5A5650'
+      ha-color-surface-low: '#4A4743'
+      ha-color-surface-lower: '#52504d'
+      ha-color-on-surface-default: '#FFFFFF'
+      ha-color-form-background: '#48484A'
+      ha-color-form-hover: '#636366'
+      ha-color-form-disabled: '#48484A'
+      divider-color: '#636366'
+      outline-color: '#636366'
+      outline-hover-color: '#D1D1D6'
+      ha-color-border-neutral-quiet: '#636366'
+      ha-color-border-neutral-normal: '#636366'
+      ha-color-border-neutral-loud: '#FFFFFF'
+      ha-color-border-primary-quiet: rgba(252, 236, 216, 0.25)
+      ha-color-border-primary-normal: '#fcecd8'
+      ha-color-fill-neutral-quiet-resting: rgba(118, 118, 128, 0.24)
+      ha-color-fill-neutral-quiet-hover: rgba(120, 120, 128, 0.32)
+      ha-color-fill-neutral-quiet-active: rgba(120, 120, 128, 0.36)
+      ha-color-fill-neutral-normal-resting: rgba(120, 120, 128, 0.32)
+      ha-color-fill-neutral-normal-hover: rgba(120, 120, 128, 0.36)
       ha-color-fill-neutral-loud-resting: '#3A3A3C'
-      ha-color-fill-primary-quiet-resting: rgba(63, 40, 9, 0.14)
-      ha-color-fill-primary-quiet-hover: rgba(63, 40, 9, 0.22)
-      ha-color-fill-primary-quiet-active: rgba(63, 40, 9, 0.28)
-      ha-color-fill-primary-normal-resting: '#3f2809'
-      ha-color-fill-primary-normal-hover: '#1f160b'
-      ha-color-fill-primary-normal-active: '#1f160b'
-      ha-color-fill-primary-loud-resting: '#3f2809'
-      ha-color-fill-primary-loud-hover: '#1f160b'
-      ha-color-fill-primary-loud-active: '#1f160b'
-      ha-color-fill-disabled-quiet-resting: rgba(118, 118, 128, 0.12)
-      ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.12)
-      ha-color-on-neutral-quiet: '#1C1C1E'
-      ha-color-on-neutral-normal: '#1C1C1E'
+      ha-color-fill-primary-quiet-resting: rgba(252, 236, 216, 0.14)
+      ha-color-fill-primary-quiet-hover: rgba(252, 236, 216, 0.22)
+      ha-color-fill-primary-quiet-active: rgba(252, 236, 216, 0.28)
+      ha-color-fill-primary-normal-resting: '#fcecd8'
+      ha-color-fill-primary-normal-hover: '#fbf5ee'
+      ha-color-fill-primary-normal-active: '#fbf5ee'
+      ha-color-fill-primary-loud-resting: '#fcecd8'
+      ha-color-fill-primary-loud-hover: '#fbf5ee'
+      ha-color-fill-primary-loud-active: '#fbf5ee'
+      ha-color-fill-disabled-quiet-resting: rgba(118, 118, 128, 0.24)
+      ha-color-fill-disabled-normal-resting: rgba(118, 118, 128, 0.24)
+      ha-color-on-neutral-quiet: '#FFFFFF'
+      ha-color-on-neutral-normal: '#FFFFFF'
       ha-color-on-neutral-loud: '#FFFFFF'
-      ha-color-on-primary-quiet: '#3f2809'
-      ha-color-on-primary-normal: '#ffffff'
-      ha-color-on-primary-loud: '#ffffff'
-      ha-color-on-disabled-quiet: '#3A3A3C'
-      ha-color-on-disabled-normal: '#3A3A3C'
-      wa-color-brand-fill-loud: '#3f2809'
-      wa-color-brand-fill-normal: rgba(63, 40, 9, 0.16)
-      wa-color-brand-fill-quiet: rgba(63, 40, 9, 0.1)
-      wa-color-brand-border-loud: '#3f2809'
-      wa-color-brand-border-normal: rgba(63, 40, 9, 0.45)
-      wa-color-brand-border-quiet: rgba(63, 40, 9, 0.22)
-      wa-color-brand-on-loud: '#ffffff'
-      wa-color-brand-on-normal: '#3f2809'
-      wa-color-brand-on-quiet: '#3f2809'
+      ha-color-on-primary-quiet: '#fcecd8'
+      ha-color-on-primary-normal: '#1C1C1E'
+      ha-color-on-primary-loud: '#1C1C1E'
+      ha-color-on-disabled-quiet: '#D1D1D6'
+      ha-color-on-disabled-normal: '#D1D1D6'
+      wa-color-brand-fill-loud: '#fcecd8'
+      wa-color-brand-fill-normal: rgba(252, 236, 216, 0.16)
+      wa-color-brand-fill-quiet: rgba(252, 236, 216, 0.1)
+      wa-color-brand-border-loud: '#fcecd8'
+      wa-color-brand-border-normal: rgba(252, 236, 216, 0.45)
+      wa-color-brand-border-quiet: rgba(252, 236, 216, 0.22)
+      wa-color-brand-on-loud: '#1C1C1E'
+      wa-color-brand-on-normal: '#fcecd8'
+      wa-color-brand-on-quiet: '#fcecd8'
       wa-color-neutral-fill-loud: '#3A3A3C'
-      wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.16)
-      wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.12)
-      wa-color-neutral-border-loud: '#1C1C1E'
-      wa-color-neutral-border-normal: '#C7C7CC'
-      wa-color-neutral-border-quiet: '#C7C7CC'
+      wa-color-neutral-fill-normal: rgba(120, 120, 128, 0.32)
+      wa-color-neutral-fill-quiet: rgba(118, 118, 128, 0.24)
+      wa-color-neutral-border-loud: '#FFFFFF'
+      wa-color-neutral-border-normal: '#636366'
+      wa-color-neutral-border-quiet: '#636366'
       wa-color-neutral-on-loud: '#FFFFFF'
-      wa-color-neutral-on-normal: '#1C1C1E'
-      wa-color-neutral-on-quiet: '#1C1C1E'
-      wa-color-text-normal: '#1C1C1E'
-      wa-color-text-quiet: '#1C1C1E'
-      wa-color-surface-default: '#FFFFFF'
-      wa-color-surface-raised: '#FFFFFF'
-      wa-color-surface-border: '#C7C7CC'
-      wa-form-control-background-color: '#E5E5EA'
-      wa-form-control-border-color: '#C7C7CC'
-      wa-form-control-value-color: '#1C1C1E'
-      wa-form-control-placeholder-color: '#3A3A3C'
-      sidebar-text-color: '#1C1C1E'
-      sidebar-icon-color: '#1C1C1E'
-      sidebar-selected-icon-color: '#3f2809'
+      wa-color-neutral-on-normal: '#FFFFFF'
+      wa-color-neutral-on-quiet: '#FFFFFF'
+      wa-color-text-normal: '#FFFFFF'
+      wa-color-text-quiet: '#FFFFFF'
+      wa-color-surface-default: '#5A5650'
+      wa-color-surface-raised: '#6A655E'
+      wa-color-surface-border: '#636366'
+      wa-form-control-background-color: '#48484A'
+      wa-form-control-border-color: '#636366'
+      wa-form-control-value-color: '#FFFFFF'
+      wa-form-control-placeholder-color: '#D1D1D6'
+      sidebar-text-color: '#FFFFFF'
+      sidebar-icon-color: '#FFFFFF'
+      sidebar-selected-icon-color: '#fcecd8'
       sidebar-menu-button-background-color: transparent
-      sidebar-menu-button-text-color: '#1C1C1E'
-      state-icon-color: '#2C2C2E'
-      state-icon-active-color: '#3f2809'
-      state-icon-unavailable-color: '#650B0B'
-      state-unavailable-color: '#650B0B'
-      state-inactive-color: '#2C2C2E'
-      state-light-off-color: '#2C2C2E'
-      state-light-inactive-color: '#2C2C2E'
-      state-switch-off-color: '#2C2C2E'
-      state-switch-inactive-color: '#2C2C2E'
-      state-climate-off-color: '#2C2C2E'
-      state-climate-inactive-color: '#2C2C2E'
-      ha-tile-info-primary-color: '#1C1C1E'
-      ha-tile-info-secondary-color: '#1C1C1E'
-      tile-icon-color: '#2C2C2E'
-      ha-heading-card-title-color: '#1C1C1E'
-      ha-heading-card-subtitle-color: '#1C1C1E'
-      input-ink-color: '#1C1C1E'
-      input-fill-color: '#E5E5EA'
-      input-disabled-fill-color: '#E5E5EA'
-      input-label-ink-color: '#1C1C1E'
-      input-disabled-ink-color: '#3A3A3C'
-      input-dropdown-icon-color: '#1C1C1E'
-      input-idle-line-color: '#C7C7CC'
-      input-hover-line-color: '#3A3A3C'
-      switch-checked-track-color: '#3f2809'
-      switch-checked-button-color: '#ffffff'
-      switch-unchecked-track-color: '#2C2C2E'
-      switch-unchecked-button-color: '#FFFFFF'
-      ha-switch-checked-background-color: '#3f2809'
-      ha-switch-checked-thumb-color: '#ffffff'
-      ha-checkbox-checked-background-color: '#3f2809'
-      ha-checkbox-checked-icon-color: '#ffffff'
-      ha-checkbox-border-color: '#2C2C2E'
-      slider-color: '#3f2809'
-      slider-secondary-color: rgba(120, 120, 128, 0.16)
-      slider-track-color: rgba(120, 120, 128, 0.20)
-      table-row-background-color: '#FFFFFF'
-      data-table-background-color: '#FFFFFF'
-      markdown-code-background-color: rgba(118, 118, 128, 0.12)
-      code-editor-background-color: rgba(118, 118, 128, 0.12)
-      markdown-link-color: '#3f2809'
-      ha-tooltip-background-color: '#FFFFFF'
-      ha-tooltip-text-color: '#1C1C1E'
-      ha-tab-indicator-color: '#3f2809'
-      ha-tab-track-color: '#C7C7CC'
-      chat-background-color-user: rgba(63, 40, 9, 0.16)
-      chat-background-color-hass: rgba(118, 118, 128, 0.12)
-      scrollbar-thumb-color: '#3A3A3C'
-      label-badge-background-color: '#FFFFFF'
-      label-badge-text-color: '#1C1C1E'
+      sidebar-menu-button-text-color: '#FFFFFF'
+      state-icon-color: '#E5E5EA'
+      state-icon-active-color: '#fcecd8'
+      state-icon-unavailable-color: '#FFC7C2'
+      state-unavailable-color: '#FFC7C2'
+      state-inactive-color: '#E5E5EA'
+      state-light-off-color: '#E5E5EA'
+      state-light-inactive-color: '#E5E5EA'
+      state-switch-off-color: '#E5E5EA'
+      state-switch-inactive-color: '#E5E5EA'
+      state-climate-off-color: '#E5E5EA'
+      state-climate-inactive-color: '#E5E5EA'
+      ha-tile-info-primary-color: '#FFFFFF'
+      ha-tile-info-secondary-color: '#FFFFFF'
+      tile-icon-color: '#E5E5EA'
+      ha-heading-card-title-color: '#FFFFFF'
+      ha-heading-card-subtitle-color: '#FFFFFF'
+      input-ink-color: '#FFFFFF'
+      input-fill-color: '#48484A'
+      input-disabled-fill-color: '#48484A'
+      input-label-ink-color: '#FFFFFF'
+      input-disabled-ink-color: '#D1D1D6'
+      input-dropdown-icon-color: '#FFFFFF'
+      input-idle-line-color: '#636366'
+      input-hover-line-color: '#D1D1D6'
+      switch-checked-track-color: '#fcecd8'
+      switch-checked-button-color: '#1C1C1E'
+      switch-unchecked-track-color: '#E5E5EA'
+      switch-unchecked-button-color: '#1C1C1E'
+      ha-switch-checked-background-color: '#fcecd8'
+      ha-switch-checked-thumb-color: '#1C1C1E'
+      ha-checkbox-checked-background-color: '#fcecd8'
+      ha-checkbox-checked-icon-color: '#1C1C1E'
+      ha-checkbox-border-color: '#E5E5EA'
+      slider-color: '#fcecd8'
+      slider-secondary-color: rgba(120, 120, 128, 0.32)
+      slider-track-color: rgba(120, 120, 128, 0.36)
+      table-row-background-color: '#5A5650'
+      data-table-background-color: '#5A5650'
+      markdown-code-background-color: rgba(118, 118, 128, 0.24)
+      code-editor-background-color: rgba(118, 118, 128, 0.24)
+      markdown-link-color: '#fcecd8'
+      ha-tooltip-background-color: '#6A655E'
+      ha-tooltip-text-color: '#FFFFFF'
+      ha-tab-indicator-color: '#fcecd8'
+      ha-tab-track-color: '#636366'
+      chat-background-color-user: rgba(252, 236, 216, 0.16)
+      chat-background-color-hass: rgba(118, 118, 128, 0.24)
+      scrollbar-thumb-color: '#D1D1D6'
+      label-badge-background-color: '#6A655E'
+      label-badge-text-color: '#FFFFFF'
       md-list-container-color: none
-      primary-color: '#3f2809'
-      accent-color: '#3f2809'
-      rgb-primary-color: 63, 40, 9
-      app-theme-color: '#F2F1EE'
-      ha-color-focus: '#3f2809'
-      wa-focus-ring-color: '#3f2809'
+      primary-color: '#fcecd8'
+      accent-color: '#fcecd8'
+      rgb-primary-color: 252, 236, 216
+      app-theme-color: '#4A4743'
+      ha-color-focus: '#fcecd8'
+      wa-focus-ring-color: '#fcecd8'
       ha-color-primary-05: '#1f160b'
       ha-color-primary-10: '#3f2809'
       ha-color-primary-20: '#7f4c06'

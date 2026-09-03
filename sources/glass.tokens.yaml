@@ -34,10 +34,10 @@
 # regular = systemMaterial, thick = systemThickMaterial, thin = systemThinMaterial.
 materials:
   light:
-    thin:    "rgba(255, 255, 255, 0.60)"
-    regular: "rgba(246, 246, 246, 0.72)"
-    content: "rgba(246, 246, 246, 0.29)"
-    thick:   "rgba(246, 246, 246, 0.84)"
+    thin:    "rgba(84, 84, 88, 0.30)"
+    regular: "rgba(84, 84, 88, 0.55)"
+    content: "rgba(60, 60, 67, 0.25)"
+    thick:   "rgba(72, 72, 74, 0.78)"
   dark:
     thin:    "rgba(37, 37, 37, 0.45)"
     regular: "rgba(37, 37, 37, 0.65)"
@@ -66,9 +66,9 @@ variants:
         gradient: "linear-gradient(160deg, #2a2724 0%, #1a1817 50%, #0d0c0b 100%)"
     # Opaque page/surface colours for everything that is NOT a dashboard.
     # visionOS is warm, so these are Apple's greys nudged warm.
-    page:     { light: "#F2F1EE", dark: "#0D0C0B" }
-    surface:  { light: "#FFFFFF", dark: "#1C1B19" }
-    elevated: { light: "#FFFFFF", dark: "#2C2A27" }
+    page:     { light: "#4A4743", dark: "#0D0C0B" }
+    surface:  { light: "#5A5650", dark: "#1C1B19" }
+    elevated: { light: "#6A655E", dark: "#2C2A27" }
 
   - key: "Liquid Glass 26"
     brand: { light: "#007AFF", dark: "#0A84FF" }   # Apple systemBlue, per mode
@@ -82,9 +82,9 @@ variants:
         image: "/local/visionos-themes/macOS_26_Dark.webp"
         gradient: "linear-gradient(155deg, #1c2028 0%, #12161d 50%, #07090d 100%)"
     # Straight Apple: systemGroupedBackground / secondary / dark-elevated.
-    page:     { light: "#F2F2F7", dark: "#000000" }
-    surface:  { light: "#FFFFFF", dark: "#1C1C1E" }
-    elevated: { light: "#FFFFFF", dark: "#2C2C2E" }
+    page:     { light: "#48484A", dark: "#000000" }
+    surface:  { light: "#5A5A5E", dark: "#1C1C1E" }
+    elevated: { light: "#6C6C70", dark: "#2C2C2E" }
 
 # Apple system colours, BOTH appearances (UIColor.system*.resolvedColor).
 status:
@@ -109,13 +109,13 @@ ink:
   # over any part of a wallpaper, so role-critical ink is opaque enough to
   # retain contrast after material compositing.
   light:
-    primary:   "#1C1C1E"
-    secondary: "#1C1C1E"
-    tertiary:  "#3A3A3C"
-    separator: "#C7C7CC"
-    fill1:     "rgba(120, 120, 128, 0.20)"
-    fill2:     "rgba(120, 120, 128, 0.16)"
-    fill3:     "rgba(118, 118, 128, 0.12)"
+    primary:   "#FFFFFF"
+    secondary: "#FFFFFF"
+    tertiary:  "#D1D1D6"
+    separator: "#636366"
+    fill1:     "rgba(120, 120, 128, 0.36)"
+    fill2:     "rgba(120, 120, 128, 0.32)"
+    fill3:     "rgba(118, 118, 128, 0.24)"
   dark:
     primary:   "#FFFFFF"
     secondary: "#FFFFFF"
