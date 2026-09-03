@@ -40,7 +40,7 @@ materials:
   dark:
     thin:    "rgba(37, 37, 37, 0.45)"
     regular: "rgba(37, 37, 37, 0.65)"
-    thick:   "rgba(37, 37, 37, 0.80)"
+    thick:   "rgba(37, 37, 37, 0.84)"
 
 # apple.com's own nav uses backdrop-filter: saturate(180%) blur(20px).
 # Over-blurring (40-60px) is the number one tell of a fake glass theme.
@@ -99,23 +99,26 @@ status:
   brown:      { light: "#A2845E", dark: "#AC8E68" }
   light-blue: { light: "#32ADE6", dark: "#64D2FF" }
 
-# Apple semantic ink. The bases are NOT pure black/white - light is #3C3C43
-# (60,60,67, faintly cool), dark is #EBEBF5 (235,235,245). Using rgba(0,0,0,.6)
-# and rgba(255,255,255,.6) instead is an instant tell.
+# Apple semantic ink is the starting point. These values are strengthened for
+# HA's image-backed materials, where the native alpha labels cannot guarantee
+# contrast across the entire wallpaper.
 ink:
+  # Apple alpha labels assume a controlled system surface. HA cards can sit
+  # over any part of a wallpaper, so role-critical ink is opaque enough to
+  # retain contrast after material compositing.
   light:
-    primary:   "#000000"
-    secondary: "rgba(60, 60, 67, 0.60)"
-    tertiary:  "rgba(60, 60, 67, 0.30)"
-    separator: "rgba(60, 60, 67, 0.29)"
+    primary:   "#1C1C1E"
+    secondary: "#48484A"
+    tertiary:  "#636366"
+    separator: "#C7C7CC"
     fill1:     "rgba(120, 120, 128, 0.20)"
     fill2:     "rgba(120, 120, 128, 0.16)"
     fill3:     "rgba(118, 118, 128, 0.12)"
   dark:
     primary:   "#FFFFFF"
-    secondary: "rgba(235, 235, 245, 0.60)"
-    tertiary:  "rgba(235, 235, 245, 0.30)"
-    separator: "rgba(84, 84, 88, 0.60)"
+    secondary: "#D1D1D6"
+    tertiary:  "#8E8E93"
+    separator: "#636366"
     fill1:     "rgba(120, 120, 128, 0.36)"
     fill2:     "rgba(120, 120, 128, 0.32)"
     fill3:     "rgba(118, 118, 128, 0.24)"

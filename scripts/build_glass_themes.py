@@ -203,13 +203,29 @@ def global_layer(cfg: dict, v: dict, prim_l: dict, prim_d: dict) -> dict:
 def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     ink = cfg["ink"][mode]
     grays = cfg["grays"][mode]
-    mat = cfg["materials"][mode][v["material"]]
+    # Navigation remains glass. Content cards use thick material so a busy
+    # wallpaper cannot erase state, text, or control affordances beneath it.
+    nav_material = cfg["materials"][mode]["regular"]
+    content_material = cfg["materials"][mode]["thick"]
     thick = cfg["materials"][mode]["thick"]
     wp = v["wallpaper"][mode]
     page, surface, elevated = v["page"][mode], v["surface"][mode], v["elevated"][mode]
     brand = v["brand"][mode]
     prim = ramp(brand)
     light = mode == "light"
+    # Keep the Apple system colour in the exported palette, but use a darker
+    # ramp stop for light-mode interactive UI where system orange/blue on a
+    # near-white material does not meet the 3:1 graphical-contrast floor.
+    ui_brand = prim[20] if light else prim[50]
+    brand_hover = prim[10] if light else prim[60]
+    brand_active = prim[5] if light else prim[70]
+    state_icon = "#636366" if light else "#AEAEB2"
+    # Off remains neutral; unavailable is an accessible fault colour, rather
+    # than the same faint grey used for an intentionally disabled control.
+    unavailable_icon = "#A61B1B" if light else "#FF6961"
+    off_track = "#636366" if light else "#8E8E93"
+    control_fill = "#E5E5EA" if light else "#48484A"
+    control_hover = "#D1D1D6" if light else "#636366"
 
     fg, fg2, fg3 = ink["primary"], ink["secondary"], ink["tertiary"]
     sep, fill1, fill2, fill3 = ink["separator"], ink["fill1"], ink["fill2"], ink["fill3"]
@@ -225,7 +241,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
     else:
         rim_hi, rim_lo = "rgba(255,255,255,0.22)", "rgba(255,255,255,0.06)"
         drop = "0 8px 32px rgba(0,0,0,0.34)"
-        on_brand = "#ffffff"
+        on_brand = "#1C1C1E"
     glass_shadow = f"inset 0 1px 0 {rim_hi}, inset 0 -1px 0 {rim_lo}, {drop}"
 
     # Wallpaper: gradient underneath as the always-paints fallback (HACS does
@@ -247,9 +263,9 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "background-image": wallpaper,
 
         # ---- GLASS layer --------------------------------------------------
-        "ha-card-background": mat,
-        "clear-background-color": mat,
-        "app-header-background-color": "transparent",
+        "ha-card-background": content_material,
+        "clear-background-color": content_material,
+        "app-header-background-color": nav_material,
         "ha-dialog-surface-background": thick,
         "ha-bottom-sheet-surface-background": thick,
         "ha-bottom-sheet-handle-color": fg3,
@@ -260,7 +276,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-text-primary": fg,
         "ha-color-text-secondary": fg2,
         "ha-color-text-disabled": fg3,
-        "ha-color-text-link": prim[40],
+        "ha-color-text-link": ui_brand,
         "primary-text-color": fg,
         "secondary-text-color": fg2,
         "disabled-text-color": fg3,
@@ -274,9 +290,9 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-surface-low": page,
         "ha-color-surface-lower": mix(page, gray, 0.12) if light else "#000000",
         "ha-color-on-surface-default": fg,
-        "ha-color-form-background": fill3,
-        "ha-color-form-hover": fill2,
-        "ha-color-form-disabled": fill3,
+        "ha-color-form-background": control_fill,
+        "ha-color-form-hover": control_hover,
+        "ha-color-form-disabled": control_fill,
 
         # ---- separators: Apple's hairline, its own base colour ------------
         "divider-color": sep,
@@ -285,8 +301,8 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-border-neutral-quiet": sep,
         "ha-color-border-neutral-normal": sep,
         "ha-color-border-neutral-loud": fg2,
-        "ha-color-border-primary-quiet": rgba(prim[40], 0.25),
-        "ha-color-border-primary-normal": prim[40],
+        "ha-color-border-primary-quiet": rgba(ui_brand, 0.25),
+        "ha-color-border-primary-normal": ui_brand,
 
         # ---- fills: Apple systemFill greys, translucent so they integrate -
         "ha-color-fill-neutral-quiet-resting": fill3,
@@ -295,15 +311,15 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-fill-neutral-normal-resting": fill2,
         "ha-color-fill-neutral-normal-hover": fill1,
         "ha-color-fill-neutral-loud-resting": fg2,
-        "ha-color-fill-primary-quiet-resting": rgba(prim[40], 0.14),
-        "ha-color-fill-primary-quiet-hover": rgba(prim[40], 0.22),
-        "ha-color-fill-primary-quiet-active": rgba(prim[40], 0.28),
-        "ha-color-fill-primary-normal-resting": prim[40],
-        "ha-color-fill-primary-normal-hover": prim[30] if light else prim[50],
-        "ha-color-fill-primary-normal-active": prim[20] if light else prim[60],
-        "ha-color-fill-primary-loud-resting": prim[40],
-        "ha-color-fill-primary-loud-hover": prim[30] if light else prim[50],
-        "ha-color-fill-primary-loud-active": prim[20] if light else prim[60],
+        "ha-color-fill-primary-quiet-resting": rgba(ui_brand, 0.14),
+        "ha-color-fill-primary-quiet-hover": rgba(ui_brand, 0.22),
+        "ha-color-fill-primary-quiet-active": rgba(ui_brand, 0.28),
+        "ha-color-fill-primary-normal-resting": ui_brand,
+        "ha-color-fill-primary-normal-hover": brand_hover,
+        "ha-color-fill-primary-normal-active": brand_active,
+        "ha-color-fill-primary-loud-resting": ui_brand,
+        "ha-color-fill-primary-loud-hover": brand_hover,
+        "ha-color-fill-primary-loud-active": brand_active,
         "ha-color-fill-disabled-quiet-resting": fill3,
         "ha-color-fill-disabled-normal-resting": fill3,
         "ha-color-on-neutral-quiet": fg,
@@ -311,22 +327,22 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "ha-color-on-neutral-loud": page,
         # On a light backdrop a brand-coloured label on a brand-tinted fill
         # needs the darker ramp step (orange on light orange especially).
-        "ha-color-on-primary-quiet": prim[30] if light else prim[40],
+        "ha-color-on-primary-quiet": ui_brand,
         "ha-color-on-primary-normal": on_brand,
         "ha-color-on-primary-loud": on_brand,
         "ha-color-on-disabled-quiet": fg3,
         "ha-color-on-disabled-normal": fg3,
 
         # ---- Web Awesome bridge (the layer 2024-era themes miss entirely) --
-        "wa-color-brand-fill-loud": prim[40],
-        "wa-color-brand-fill-normal": rgba(prim[40], 0.16),
-        "wa-color-brand-fill-quiet": rgba(prim[40], 0.10),
-        "wa-color-brand-border-loud": prim[40],
-        "wa-color-brand-border-normal": rgba(prim[40], 0.45),
-        "wa-color-brand-border-quiet": rgba(prim[40], 0.22),
+        "wa-color-brand-fill-loud": ui_brand,
+        "wa-color-brand-fill-normal": rgba(ui_brand, 0.16),
+        "wa-color-brand-fill-quiet": rgba(ui_brand, 0.10),
+        "wa-color-brand-border-loud": ui_brand,
+        "wa-color-brand-border-normal": rgba(ui_brand, 0.45),
+        "wa-color-brand-border-quiet": rgba(ui_brand, 0.22),
         "wa-color-brand-on-loud": on_brand,
-        "wa-color-brand-on-normal": prim[30] if light else prim[40],
-        "wa-color-brand-on-quiet": prim[30] if light else prim[40],
+        "wa-color-brand-on-normal": ui_brand,
+        "wa-color-brand-on-quiet": ui_brand,
         "wa-color-neutral-fill-loud": fg2,
         "wa-color-neutral-fill-normal": fill2,
         "wa-color-neutral-fill-quiet": fill3,
@@ -341,7 +357,7 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "wa-color-surface-default": surface,
         "wa-color-surface-raised": elevated,
         "wa-color-surface-border": sep,
-        "wa-form-control-background-color": fill3,
+        "wa-form-control-background-color": control_fill,
         "wa-form-control-border-color": sep,
         "wa-form-control-value-color": fg,
         "wa-form-control-placeholder-color": fg3,
@@ -349,27 +365,27 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         # ---- sidebar (--sidebar-selected-text-color is DEAD in 2026) ------
         "sidebar-text-color": fg2,
         "sidebar-icon-color": fg2,
-        "sidebar-selected-icon-color": prim[40],
+        "sidebar-selected-icon-color": ui_brand,
         "sidebar-menu-button-background-color": "transparent",
         "sidebar-menu-button-text-color": fg,
 
         # ---- states / icons ------------------------------------------------
-        "state-icon-color": gray,
-        "state-icon-active-color": prim[40],
-        "state-icon-unavailable-color": fg3,
-        "state-inactive-color": fg3,
+        "state-icon-color": state_icon,
+        "state-icon-active-color": ui_brand,
+        "state-icon-unavailable-color": unavailable_icon,
+        "state-inactive-color": state_icon,
 
         # ---- tiles / headings ----------------------------------------------
         "ha-tile-info-primary-color": fg,
         "ha-tile-info-secondary-color": fg2,
-        "tile-icon-color": gray,
+        "tile-icon-color": state_icon,
         "ha-heading-card-title-color": fg,
         "ha-heading-card-subtitle-color": fg2,
 
         # ---- inputs ---------------------------------------------------------
         "input-ink-color": fg,
-        "input-fill-color": fill3,
-        "input-disabled-fill-color": fill3,
+        "input-fill-color": control_fill,
+        "input-disabled-fill-color": control_fill,
         "input-label-ink-color": fg2,
         "input-disabled-ink-color": fg3,
         "input-dropdown-icon-color": fg2,
@@ -377,16 +393,16 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "input-hover-line-color": fg3,
 
         # ---- switches / sliders ---------------------------------------------
-        "switch-checked-track-color": prim[40],
-        "switch-checked-button-color": "#ffffff",
-        "switch-unchecked-track-color": gray3 if light else gray2,
+        "switch-checked-track-color": ui_brand,
+        "switch-checked-button-color": on_brand,
+        "switch-unchecked-track-color": off_track,
         "switch-unchecked-button-color": "#ffffff",
-        "ha-switch-checked-background-color": prim[40],
-        "ha-switch-checked-thumb-color": "#ffffff",
-        "ha-checkbox-checked-background-color": prim[40],
-        "ha-checkbox-checked-icon-color": "#ffffff",
-        "ha-checkbox-border-color": gray2,
-        "slider-color": prim[40],
+        "ha-switch-checked-background-color": ui_brand,
+        "ha-switch-checked-thumb-color": on_brand,
+        "ha-checkbox-checked-background-color": ui_brand,
+        "ha-checkbox-checked-icon-color": on_brand,
+        "ha-checkbox-border-color": off_track,
+        "slider-color": ui_brand,
         "slider-secondary-color": fill2,
         "slider-track-color": fill1,
 
@@ -395,14 +411,14 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "data-table-background-color": surface,
         "markdown-code-background-color": fill3,
         "code-editor-background-color": fill3,
-        "markdown-link-color": prim[40],
+        "markdown-link-color": ui_brand,
 
         # ---- misc -------------------------------------------------------------
         "ha-tooltip-background-color": elevated,
         "ha-tooltip-text-color": fg,
-        "ha-tab-indicator-color": prim[40],
+        "ha-tab-indicator-color": ui_brand,
         "ha-tab-track-color": sep,
-        "chat-background-color-user": rgba(prim[40], 0.16),
+        "chat-background-color-user": rgba(ui_brand, 0.16),
         "chat-background-color-hass": fill3,
         "scrollbar-thumb-color": fg3,
         "label-badge-background-color": elevated,
@@ -410,12 +426,12 @@ def mode_layer(cfg: dict, v: dict, mode: str) -> dict:
         "md-list-container-color": "none",
 
         # ---- brand + Apple system palette, per appearance -------------------
-        "primary-color": prim[40],
-        "accent-color": prim[40],
-        "rgb-primary-color": ", ".join(str(c) for c in hex2rgb(prim[40])),
+        "primary-color": ui_brand,
+        "accent-color": ui_brand,
+        "rgb-primary-color": ", ".join(str(c) for c in hex2rgb(ui_brand)),
         "app-theme-color": page,
-        "ha-color-focus": prim[40],
-        "wa-focus-ring-color": prim[40],
+        "ha-color-focus": ui_brand,
+        "wa-focus-ring-color": ui_brand,
     }
 
     for step in RAMP_STEPS:
